@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './header.css';
+
 import {
   FaHome,
   FaInfoCircle,
   FaServicestack,
   FaEnvelope
 } from 'react-icons/fa';
+
 import logo from '../../assets/images/logoh.png';
 
 const Header = () => {
@@ -16,15 +19,17 @@ const Header = () => {
       <div className="header-container">
         {/* LOGO */}
         <div className="logo">
-          <img src={logo} alt="Logo" />
+          <Link to="/">
+            <img src={logo} alt="Logo" />
+          </Link>
         </div>
 
-        {/* DESKTOP NAV (with icons) */}
+        {/* DESKTOP NAV */}
         <nav className="nav">
-          <a href="#home"><FaHome /> Home</a>
-          <a href="#about"><FaInfoCircle /> About</a>
-          <a href="#services"><FaServicestack /> Services</a>
-          <a href="#contact"><FaEnvelope /> Contact</a>
+          <Link to="/"><FaHome /> Home</Link>
+          <Link to="/#about"><FaInfoCircle /> About</Link>
+          <Link to="/#services"><FaServicestack /> Services</Link>
+          <Link to="/contact"><FaEnvelope /> Contact</Link>
         </nav>
 
         {/* HAMBURGER */}
@@ -40,24 +45,26 @@ const Header = () => {
 
       {/* SIDEBAR */}
       <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
-        {/* SIDEBAR LOGO */}
         <div className="sidebar-logo">
           <img src={logo} alt="Sidebar Logo" />
         </div>
 
         <nav className="sidebar-nav">
-          <a href="#home" onClick={() => setIsSidebarOpen(false)}>
+          <Link to="/" onClick={() => setIsSidebarOpen(false)}>
             <FaHome /> Home
-          </a>
-          <a href="#about" onClick={() => setIsSidebarOpen(false)}>
+          </Link>
+
+          <Link to="/#about" onClick={() => setIsSidebarOpen(false)}>
             <FaInfoCircle /> About
-          </a>
-          <a href="#services" onClick={() => setIsSidebarOpen(false)}>
+          </Link>
+
+          <Link to="/#services" onClick={() => setIsSidebarOpen(false)}>
             <FaServicestack /> Services
-          </a>
-          <a href="#contact" onClick={() => setIsSidebarOpen(false)}>
+          </Link>
+
+          <Link to="/contact" onClick={() => setIsSidebarOpen(false)}>
             <FaEnvelope /> Contact
-          </a>
+          </Link>
         </nav>
       </div>
 

@@ -1,5 +1,11 @@
 .site-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
   height: 56px;
+
   background: #111;
   color: #aaa;
 
@@ -9,4 +15,6 @@
 
   border-top: 1px solid #222;
   font-size: 0.9rem;
+
+  z-index: 1000;
 }
