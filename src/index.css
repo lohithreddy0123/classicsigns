@@ -1,3 +1,4 @@
+/* Reset */
 *,
 *::before,
 *::after {
@@ -6,17 +7,30 @@
   padding: 0;
 }
 
-html {
-  font-size: 16px;
+/* Global gradient theme */
+html,
+body {
+  width: 100%;
+  min-height: 100%;
 }
 
 body {
   font-family: Arial, sans-serif;
-  background: #0a0a0a;
-  color: white;
-  line-height: 1.5;
+  color: #ffffff;
+
+  /* 🔥 BLACK CENTER → BLUE EDGES */
+  background:
+    radial-gradient(circle at center,
+      #000000 0%,
+      #000000 45%,
+      #020b1c 65%,
+      #041a3a 85%,
+      #062a66 100%);
+
+  background-attachment: fixed;
 }
 
+/* Root container */
 #root {
-  width: 100%;
+  min-height: 100vh;
 }
