@@ -1,0 +1,203 @@
+/* =======================
+   Free Section Container
+   ======================= */
+#free-section {
+  position: relative;
+  margin: 80px auto;
+  max-width: 950px;
+  padding: 50px 30px;
+  background: linear-gradient(145deg, #0a1a2c, #132b44);
+  /* dark elegant gradient */
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  /* subtle shadow */
+  text-align: center;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  /* subtle border for elegance */
+}
+
+#free-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right,
+      rgba(255, 255, 255, 0.03),
+      transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* =======================
+   Header
+   ======================= */
+.free-header {
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.free-header h2 {
+  font-size: 2.3rem;
+  font-weight: 600;
+  /* softer than bold */
+  color: #e0e0e0;
+  /* soft white */
+  margin-bottom: 16px;
+}
+
+.free-header p {
+  font-size: 1.1rem;
+  color: #a0bcd4;
+  /* muted soft blue for readability */
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* =======================
+   Contact Cards / Benefits
+   ======================= */
+.free-benefits {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.benefit-item {
+  flex: 1 1 28%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  border-radius: 16px;
+  background: linear-gradient(120deg, #0d1f33, #10304d);
+  /* muted dark gradient */
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  min-width: 250px;
+}
+
+.benefit-item:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 15px 30px rgba(0, 0, 0, 0.7);
+}
+
+/* Icons */
+.benefit-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg, #2a5f8a, #3c7ba0);
+  /* soft muted blue gradient */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.benefit-item:hover .benefit-icon {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* Text inside cards */
+.benefit-item div {
+  display: flex;
+  flex-direction: column;
+}
+
+.benefit-item strong {
+  font-size: 1.05rem;
+  color: #ffffff;
+  /* clean soft white */
+  margin-bottom: 4px;
+}
+
+.benefit-item span {
+  font-size: 1.05rem;
+  color: #a0bcd4;
+  /* muted blue */
+  margin-bottom: 4px;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.subtext {
+  font-size: 0.95rem;
+  color: #8fa6bc;
+  /* subtle muted blue */
+  line-height: 1.4;
+}
+
+/* =======================
+   CTA Button
+   ======================= */
+.cta-button {
+  display: inline-block;
+  padding: 16px 36px;
+  border-radius: 30px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2a5f8a, #3c7ba0);
+  /* muted gradient button */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  z-index: 1;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.7);
+}
+
+/* =======================
+   Responsive
+   ======================= */
+@media (max-width: 992px) {
+  .free-benefits {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .benefit-item {
+    flex: 1 1 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  #free-section {
+    margin: 60px 16px;
+    padding: 40px 20px;
+  }
+
+  .free-header h2 {
+    font-size: 1.9rem;
+  }
+
+  .benefit-item {
+    padding: 16px 18px;
+  }
+
+  .benefit-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .benefit-item {
+    flex: 1 1 100%;
+  }
+}
