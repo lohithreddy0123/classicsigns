@@ -1,0 +1,16 @@
+.site-header {
+  height: 64px;
+  background: #111;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+
+  border-bottom: 1px solid #222;
+}
+
+.site-header h2 {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
