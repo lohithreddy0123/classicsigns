@@ -1,0 +1,125 @@
+/* FAQ Section Wrapper */
+#faq-section {
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto;
+  /* more breathing room from top */
+  padding: 0 8px;
+  /* minimal left/right padding */
+  border-radius: 10px;
+}
+
+/* FAQ Section Title */
+#faq-section h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  /* bigger for impact */
+  margin-bottom: 40px;
+  /* space before first question */
+  font-weight: 700;
+  letter-spacing: 1px;
+  background: linear-gradient(to right, #4fc3f7, #81d4fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* FAQ Item Container */
+.faq-item {
+  padding: 16px 14px;
+  /* more vertical padding */
+  margin-bottom: 20px;
+  /* space between FAQ items */
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  border-left: 4px solid #4fc3f7;
+  /* subtle accent line to differentiate */
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.faq-item:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: #81d4fa;
+  /* hover accent */
+}
+
+.faq-item.active {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: #4fc3f7;
+}
+
+/* FAQ Question */
+.faq-question {
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 1.15rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.faq-question .arrow {
+  font-size: 1.3em;
+  color: #4fc3f7;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.faq-item.active .faq-question .arrow {
+  transform: rotate(180deg);
+  color: #81d4fa;
+}
+
+/* FAQ Answer */
+.faq-answer {
+  display: none;
+  margin-top: 10px;
+  padding-left: 10px;
+  /* slightly indented */
+  color: #e0e0e0;
+  font-size: 1rem;
+  line-height: 1.7;
+  /* airy reading */
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+  /* subtle left line for differentiation */
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  #faq-section {
+    padding: 0 6px;
+  }
+
+  #faq-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .faq-item {
+    padding: 14px 10px;
+    margin-bottom: 16px;
+    border-left-width: 3px;
+  }
+
+  .faq-question {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+
+  .faq-answer {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding-left: 8px;
+    border-left-width: 2px;
+  }
+
+  .faq-question .arrow {
+    font-size: 1.2em;
+  }
+}
