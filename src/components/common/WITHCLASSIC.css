@@ -1,0 +1,86 @@
+/* ===============================
+   WITH CLASSIC – THEME SECTION
+   =============================== */
+
+.withclassic-section {
+  width: 100%;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Pills container */
+.withclassic-questions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 35px;
+}
+
+/* Individual pill */
+.withclassic-pill {
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #e3f2fd;
+
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.withclassic-pill:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Tagline */
+.withclassic-tagline {
+  max-width: 900px;
+  margin: 0 auto;
+
+  padding: 18px 24px;
+  border-radius: 20px;
+
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.4;
+
+  color: #ffffff;
+
+  background: linear-gradient(135deg,
+      rgba(30, 136, 229, 0.35),
+      rgba(13, 71, 161, 0.35));
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* ===============================
+   MOBILE
+   =============================== */
+
+@media (max-width: 768px) {
+  .withclassic-section {
+    padding: 20px 16px;
+  }
+
+  .withclassic-pill {
+    font-size: 0.9rem;
+    padding: 10px 18px;
+  }
+
+  .withclassic-tagline {
+    font-size: 1.15rem;
+    padding: 16px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .withclassic-tagline {
+    font-size: 1.05rem;
+  }
+}
