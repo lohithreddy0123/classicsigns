@@ -1,0 +1,124 @@
+/* ===============================
+   CTA 1 – SMALL VIDEO VERSION
+   =============================== */
+
+.cta1-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 50px 20px;
+  margin-top: 40px;
+
+  background: radial-gradient(circle at center,
+      #000000 0%,
+      #000000 45%,
+      #020b1c 65%,
+      #041a3a 85%,
+      #062a66 100%);
+}
+
+/* ===============================
+   VIDEO CONTAINER (FORCED SMALL)
+   =============================== */
+
+.cta1-video {
+  flex: none;
+  /* ❌ no flex grow */
+  width: 320px;
+  /* 🔥 SMALL WIDTH */
+}
+
+.cta1-video video {
+  width: 320px;
+  /* 🔥 FORCE WIDTH */
+  height: 180px;
+  /* 🔥 FORCE HEIGHT */
+  object-fit: cover;
+  /* keeps video neat */
+  border-radius: 12px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* ===============================
+   CTA CONTENT
+   =============================== */
+
+.cta1-content {
+  max-width: 420px;
+  color: #ffffff;
+}
+
+.cta1-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+.cta1-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  color: #cfd8ff;
+}
+
+/* ===============================
+   BUTTON
+   =============================== */
+
+.cta1-button {
+  display: inline-block;
+  padding: 12px 26px;
+  border-radius: 26px;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #1e88e5, #1565c0);
+  box-shadow: 0 8px 22px rgba(30, 136, 229, 0.35);
+}
+
+/* ===============================
+   TABLET & MOBILE
+   =============================== */
+
+@media (max-width: 768px) {
+  .cta1-section {
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+  }
+
+  .cta1-video {
+    width: 260px;
+  }
+
+  .cta1-video video {
+    width: 260px;
+    height: 150px;
+    /* 🔥 SMALLER HEIGHT */
+  }
+
+  .cta1-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .cta1-content p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ===============================
+   SMALL PHONES
+   =============================== */
+
+@media (max-width: 480px) {
+  .cta1-video {
+    width: 220px;
+  }
+
+  .cta1-video video {
+    width: 220px;
+    height: 125px;
+    /* 🔥 VERY SMALL */
+  }
+}
