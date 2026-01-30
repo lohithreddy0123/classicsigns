@@ -11,6 +11,7 @@ import WHY from '../../components/common/WHY';
 import HEAD from '../../components/common/HEAD';
 import HEAD2 from '../../components/common/HEAD2';
 import INTRO from '../../components/common/INTRO';
+import SERV from '../../components/common/SERV';
 
 const Home = () => {
   return (
@@ -29,6 +30,7 @@ const Home = () => {
 
       {/* CTA Section */}
       <CTA1 />
+      <SERV />
 
 
 
