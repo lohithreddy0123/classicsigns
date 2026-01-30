@@ -6,13 +6,23 @@ import CTA1 from '../../components/common/CTA1';
 import WITHCLASSIC from '../../components/common/WITHCLASSIC'; // ✔ correct import
 import AdvCTA from '../../components/common/advcta';
 import HERO from '../../components/common/HERO';
-
+import CTA2 from '../../components/common/CTA2';
+import WHY from '../../components/common/WHY';
+import HEAD from '../../components/common/HEAD';
+import HEAD2 from '../../components/common/HEAD2';
+import INTRO from '../../components/common/INTRO';
 
 const Home = () => {
   return (
     <div className="home">
+
       <HERO />
+      <HEAD2 />
+      <INTRO />
+
       <AdvCTA />
+
+      <WHY />
 
       {/* Hero / Video / Section */}
       <WITHCLASSIC />
@@ -24,6 +34,8 @@ const Home = () => {
 
       {/* FAQ Section */}
       <FAQ />
+      <CTA2 />
+      <HEAD />
 
     </div>
   );

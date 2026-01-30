@@ -1,0 +1,71 @@
+/* Updated Styling for Main Headline (h1) */
+.main-headline {
+  font-family: "Roboto", sans-serif;
+  /* Clean and modern font */
+  font-size: 3em;
+  /* Slightly larger for main headline */
+  font-weight: 700;
+  /* Bold for prominence */
+  color: #ffffff;
+  background: linear-gradient(to right, #00acc1, #004d40);
+  /* Gradient accent */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+  text-align: center;
+  /* Center-align for emphasis */
+}
+
+#introduction-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  gap: 30px;
+  padding: 20px;
+  background: radial-gradient(circle at center, #000000 0%, #041a3a 100%);
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.introduction-text {
+  flex: 1;
+  max-width: 600px;
+  position: relative;
+  z-index: 1;
+}
+
+.introduction-text p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1em;
+  color: #ffffff;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  border-left: 4px solid #00acc1;
+  margin-left: 0;
+}
+
+.introduction-animation {
+  flex: 1;
+  max-width: 600px;
+}
+
+.introduction-animation video {
+  width: 100%;
+  height: auto;
+  border-radius: 20%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 480px) {
+  #introduction-section {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .main-headline {
+    font-size: 2em;
+    /* smaller, normal heading size for mobile */
+  }
+}

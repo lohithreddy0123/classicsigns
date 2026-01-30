@@ -1,0 +1,102 @@
+/* =========================
+   RESET
+========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================
+   HEAD SECTION
+========================= */
+.head-section {
+  width: 100%;
+  min-height: 100vh;
+  /* full viewport on desktop */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  padding: 60px 20px;
+  /* desktop padding */
+}
+
+.head-wrapper {
+  max-width: 1200px;
+  text-align: center;
+}
+
+/* =========================
+   HEADING
+========================= */
+.head-title {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  font-size: clamp(4rem, 8vw, 7rem);
+  line-height: 1.1;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+}
+
+.head-subtitle {
+  margin-top: 20px;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Optional: fade-in animation for text */
+.head-title,
+.head-subtitle {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+
+.head-subtitle {
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .head-title {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+  }
+
+  .head-subtitle {
+    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .head-section {
+    min-height: auto;
+    /* allow section to shrink */
+    padding: 30px 15px;
+    /* reduce top/bottom space */
+  }
+
+  .head-title {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+  }
+
+  .head-subtitle {
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
+  }
+}
