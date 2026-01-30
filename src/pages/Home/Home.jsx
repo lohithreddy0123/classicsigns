@@ -12,6 +12,8 @@ import HEAD from '../../components/common/HEAD';
 import HEAD2 from '../../components/common/HEAD2';
 import INTRO from '../../components/common/INTRO';
 import SERV from '../../components/common/SERV';
+import GALLERYH from '../../components/common/GALLERYH';
+import GAL from '../../components/common/GAL';
 
 const Home = () => {
   return (
@@ -19,11 +21,13 @@ const Home = () => {
 
       <HERO />
       <HEAD2 />
+      <GAL />
       <INTRO />
 
       <AdvCTA />
 
       <WHY />
+      <GALLERYH />
 
       {/* Hero / Video / Section */}
       <WITHCLASSIC />
