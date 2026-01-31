@@ -25,7 +25,7 @@ const CTA1 = () => {
           clean design, and measurable growth.
         </p>
 
-        <Link to="/Call" className="cta1-button">
+        <Link to="/Contact" className="cta1-button">
           Get Started
         </Link>
       </div>

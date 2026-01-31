@@ -9,7 +9,7 @@ const CTA2 = () => {
         Speak with our SEO specialists today to discuss how Vyrex can help you
         achieve your digital marketing goals.
       </p>
-      <a href="/call" className="cta2-button">
+      <a href="/contact" className="cta2-button">
         Request a Call
       </a>
     </section>

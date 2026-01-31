@@ -27,8 +27,8 @@ const Header = () => {
         {/* DESKTOP NAV */}
         <nav className="nav">
           <Link to="/"><FaHome /> Home</Link>
-          <Link to="/#about"><FaInfoCircle /> About</Link>
-          <Link to="/#services"><FaServicestack /> Services</Link>
+          <Link to="/about"><FaInfoCircle /> About</Link>
+          <Link to="/services"><FaServicestack /> Services</Link>
           <Link to="/contact"><FaEnvelope /> Contact</Link>
         </nav>
 
@@ -54,11 +54,11 @@ const Header = () => {
             <FaHome /> Home
           </Link>
 
-          <Link to="/#about" onClick={() => setIsSidebarOpen(false)}>
+          <Link to="/about" onClick={() => setIsSidebarOpen(false)}>
             <FaInfoCircle /> About
           </Link>
 
-          <Link to="/#services" onClick={() => setIsSidebarOpen(false)}>
+          <Link to="/services" onClick={() => setIsSidebarOpen(false)}>
             <FaServicestack /> Services
           </Link>
 

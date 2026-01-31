@@ -23,7 +23,7 @@ const Why = () => {
             <li><span className="icon">🌦️</span> Weather-resistant enamel finish</li>
             <li><span className="icon">🌍</span> International delivery available</li>
           </ul>
-          <a href="#contact" className="why-btn">Let’s Connect</a>
+          <a href="contact" className="why-btn">Let’s Connect</a>
         </div>
       </div>
     </section>
