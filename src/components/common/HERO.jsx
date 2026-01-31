@@ -9,23 +9,23 @@ import hor3 from '../../assets/images/hor3.png';
 const slides = [
   {
     image: hor1,
-    title: "Grow Your Brand",
-    subtitle: "Smart strategy, clean design, measurable results."
+    title: "72-Inch Round Porcelain Signs",
+    subtitle: "Custom enamel buttons & round signage for collectors."
   },
   {
     image: hor5,
-    title: "Reach New Heights",
-    subtitle: "Empower your business with our expertise."
+    title: "Vintage Round Neon Signs",
+    subtitle: "Make a statement with retro neon & porcelain."
   },
   {
     image: hor2,
-    title: "Transform Your Vision",
-    subtitle: "Turning ideas into success stories."
+    title: "Heritage Button Signage",
+    subtitle: "Classic designs built to last decades."
   },
   {
     image: hor3,
-    title: "Innovate & Inspire",
-    subtitle: "Stay ahead with modern solutions."
+    title: "Custom Collector Pieces",
+    subtitle: "From enamel buttons to large round signs."
   }
 ];
 
@@ -82,7 +82,7 @@ const HERO = () => {
             <div className="hero-content">
               <h1>{slide.title}</h1>
               <p>{slide.subtitle}</p>
-              <a href="#contact" className="hero-btn">Contact Us</a>
+              <a href="#contact" className="hero-btn">Get a Quote</a>
             </div>
           </div>
         </div>

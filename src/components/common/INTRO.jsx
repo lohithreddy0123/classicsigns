@@ -6,17 +6,20 @@ const Intro = () => {
   return (
     <div id="introduction-section">
       <div className="introduction-text">
-        <h1 className="main-headline">Porcelain Signs - Elegant & Durable</h1>
-        <p>We craft premium porcelain signs that combine elegance with durability.</p>
+        <h1 className="main-headline">
+          Classic Porcelain Enamel Signs
+        </h1>
         <p>
-          Our signs are perfect for businesses, homes, and decorative projects, providing a timeless look
-          that stands the test of time.
+          At Classic Porcelain Signs, we craft premium handcrafted porcelain enamel signs that blend vintage charm with lasting durability.
         </p>
         <p>
-          Whether you're looking for a custom address plaque or a unique decorative sign, our porcelain
-          creations are designed to leave a lasting impression.
+          Each custom enamel sign is weatherproof, fade-resistant, and made to stand out—perfect for adding timeless character to homes, businesses, and collector spaces.
+        </p>
+        <p>
+          From retro porcelain buttons to oversized 72-inch round enamel signs, our creations are designed to make a bold statement and leave a lasting impression.
         </p>
       </div>
+
       <div className="introduction-animation">
         <video autoPlay loop muted>
           <source src={porcelainVideo} type="video/mp4" />

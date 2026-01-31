@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./advcta.css";
 
 const AdvCTA = () => {
@@ -6,9 +7,10 @@ const AdvCTA = () => {
     <section id="free-section">
       {/* Header */}
       <div className="free-header">
-        <h2>Contact Classic Porcelain Signs</h2>
+        <h2>Get Your Custom Porcelain Sign</h2>
         <p>
-          We craft high-quality porcelain and enamel signs. Reach out for custom designs, quotes, or any inquiries about our products.
+          Discuss your custom porcelain sign with our experts at no cost to you.
+          Get your quote for free and start crafting your unique enamel or porcelain sign today.
         </p>
       </div>
 
@@ -25,7 +27,7 @@ const AdvCTA = () => {
           <div>
             <strong>Phone (India):</strong>
             <span>90631 43344</span>
-            <p className="subtext">Call during business hours for inquiries or custom orders.</p>
+            <p className="subtext">Call for inquiries or custom orders anytime.</p>
           </div>
         </div>
 
@@ -43,7 +45,7 @@ const AdvCTA = () => {
           <div>
             <strong>Phone (US):</strong>
             <span>81001 10011</span>
-            <p className="subtext">For international customers and inquiries.</p>
+            <p className="subtext">For international customers and inquiries at any time.</p>
           </div>
         </div>
 
@@ -55,15 +57,14 @@ const AdvCTA = () => {
           <div>
             <strong>Email:</strong>
             <span>info@classicporcelainsigns.com</span>
-            <p className="subtext">Send us an email for quotes, customization, or general questions.</p>
+            <p className="subtext">Email us for free quotes, customization, or questions anytime.</p>
           </div>
         </div>
       </div>
-
       {/* CTA Button */}
-      <a href="mailto:info@classicporcelainsigns.com" className="cta-button">
-        Request Your Custom Sign
-      </a>
+      <Link to="/contact" className="cta-button">
+        Request Your Free Custom Sign
+      </Link>
     </section>
   );
 };

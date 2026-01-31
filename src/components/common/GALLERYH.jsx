@@ -71,7 +71,7 @@ const GalleryH = () => {
 
   return (
     <section id="gallery-section">
-      <h2>Porcelain Signs</h2>
+      <h2>Porcelain Signage</h2>
 
       <div className="gallery-shell">
         <button className="arrow left" onClick={() => scroll("left")}>‹</button>
