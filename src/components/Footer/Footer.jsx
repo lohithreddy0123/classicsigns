@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-section footer-logo">
         <Link to="/">
-          <img src={logo} alt="classicsigns Logo" className="logo" />
+          <img src={logo} alt="Classic Porcelain Signs Logo" className="logo" />
         </Link>
       </div>
 
@@ -21,7 +21,6 @@ const Footer = () => {
             <li><Link to="/services">Services</Link></li>
             <li><Link to="/contact">Contact Us</Link></li>
           </ul>
-
         </div>
 
         <div className="footer-section footer-legal">
@@ -30,20 +29,22 @@ const Footer = () => {
             <li><Link to="/TermsAndConditions">Policies</Link></li>
             <li><a href="#faq-section">FAQ</a></li>
           </ul>
-
         </div>
 
         <div className="footer-section footer-social">
           <h4>Follow Us</h4>
           <div className="social-icons">
-            <a href="https://www.linkedin.com/company/vyrex-seo" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/company/classic-porcelain-signs" target="_blank" rel="noopener noreferrer">
               <img src="https://img.icons8.com/ios-filled/30/ffffff/linkedin.png" alt="LinkedIn" />
             </a>
-            <a href="https://x.com/VyrexOfficial" target="_blank" rel="noopener noreferrer">
+            <a href="https://twitter.com/ClassicPorcelain" target="_blank" rel="noopener noreferrer">
               <img src="https://img.icons8.com/ios-filled/30/ffffff/twitter.png" alt="Twitter" />
             </a>
-            <a href="https://www.facebook.com/share/u64nanas4ZY8icGJ/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/ClassicPorcelainSigns" target="_blank" rel="noopener noreferrer">
               <img src="https://img.icons8.com/ios-filled/30/ffffff/facebook-new.png" alt="Facebook" />
+            </a>
+            <a href="https://www.instagram.com/classicporcelainsigns" target="_blank" rel="noopener noreferrer">
+              <img src="https://img.icons8.com/ios-filled/30/ffffff/instagram-new.png" alt="Instagram" />
             </a>
           </div>
         </div>
@@ -51,7 +52,7 @@ const Footer = () => {
 
       <hr className="footer-divider" />
       <div className="footer-bottom">
-        <p>© 2026 Classic Porcelain Signs. All rights reserved.</p>
+        <p>© 2025 Classic Porcelain Signs. All rights reserved.</p>
       </div>
     </footer>
   );
