@@ -11,7 +11,6 @@
   letter-spacing: 0.18em;
   text-transform: uppercase;
   margin-bottom: 55px;
-  color: #f8f8f8;
 }
 
 /* Shell */
@@ -35,6 +34,7 @@
   padding: 12px 10px;
   overflow-x: auto;
   scrollbar-width: none;
+  will-change: transform;
 }
 
 .gallery-track::-webkit-scrollbar {
@@ -48,8 +48,8 @@
   border-radius: 20px;
   overflow: hidden;
   background: #111;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7);
-  transition: transform 0.4s ease;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
+  transition: transform 0.35s ease;
 }
 
 .gallery-card img {
@@ -58,6 +58,7 @@
   object-fit: cover;
 }
 
+/* Hover */
 .gallery-card:hover {
   transform: translateY(-6px);
 }
