@@ -5,14 +5,14 @@ const WITHCLASSIC = () => {
   return (
     <section className="withclassic-section">
       <div className="withclassic-questions">
-        <span className="withclassic-pill">Want better search rankings?</span>
-        <span className="withclassic-pill">Looking for affordable SEO?</span>
-        <span className="withclassic-pill">Need a boost for your startup?</span>
-        <span className="withclassic-pill">Ready to increase website traffic?</span>
+        <span className="withclassic-pill">Looking for custom porcelain signs?</span>
+        <span className="withclassic-pill">Want vintage enamel designs?</span>
+        <span className="withclassic-pill">Need a 72-inch round masterpiece?</span>
+        <span className="withclassic-pill">Ready to elevate your décor or brand?</span>
       </div>
 
       <div className="withclassic-tagline">
-        With Vyrex, achieving your SEO goals is not optional — it’s inevitable.
+        With Classic Porcelain Signs, timeless craftsmanship and enduring quality come standard.
       </div>
     </section>
   );
