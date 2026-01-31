@@ -7,25 +7,26 @@ const Head2 = () => {
 
         {/* LEFT — BIG 4-LINE HEADING */}
         <div className="head2-heading">
-          <span>What</span>
-          <span>works,</span>
-          <span>no more,</span>
-          <span>no less.</span>
+          <span>Know</span>
+          <span>Classic,</span>
+          <span>what we</span>
+          <span>stand for.</span>
         </div>
 
         {/* RIGHT — SMALL TEXT */}
         <div className="head2-text">
-          <span className="head2-logo">SOURCE</span>
+          <span className="head2-logo">CLASSIC PORCELAIN SIGNS</span>
 
-          <h4>Bureau de design et technologie</h4>
+          <h4>Premium Porcelain & Enamel Signage</h4>
 
           <p>
-            Source rassemble des designers et experts techniques autour
-            d’une mission : rendre les entreprises plus performantes grâce
-            à des solutions numériques innovantes.
+            At Classic Porcelain Signs, we craft handmade porcelain enamel signs
+            that blend vintage charm with lasting durability. From custom buttons
+            to oversized 72-inch round signage, each piece is designed to make a
+            statement and stand the test of time.
           </p>
 
-          <a href="#">Explorer →</a>
+          <a href="/contact">Get Your Free Quote →</a>
         </div>
 
       </div>

@@ -11,7 +11,7 @@ const CTA1 = () => {
       <div className="cta1-media">
         <img
           src={ver15}
-          alt="Brand growth visual"
+          alt="Custom Porcelain Sign Visual"
           loading="lazy"
           decoding="async"
         />
@@ -19,14 +19,14 @@ const CTA1 = () => {
 
       {/* CONTENT */}
       <div className="cta1-content">
-        <h2>Ready to Grow Your Brand?</h2>
+        <h2>Get Your Custom Porcelain Sign</h2>
         <p>
-          See how we transform businesses with smart strategy,
-          clean design, and measurable growth.
+          At Classic Porcelain Signs, we craft handcrafted enamel signs — from vintage buttons
+          to 72-inch round signage — designed to make a statement and last a lifetime.
         </p>
 
-        <Link to="/Contact" className="cta1-button">
-          Get Started
+        <Link to="/contact" className="cta1-button">
+          Request Your Free Quote
         </Link>
       </div>
     </section>

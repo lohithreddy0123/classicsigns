@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './faq.css';
+
 const FAQ = () => {
   // State to manage which FAQ item is open
   const [openIndex, setOpenIndex] = useState(null);
@@ -7,48 +8,52 @@ const FAQ = () => {
   // FAQ items data
   const faqs = [
     {
-      question: "What is included in the free Lite plan?",
-      answer: "The free Lite plan includes a thorough website review, identification of key SEO issues, and customized recommendations for improvement."
+      question: "What are classic porcelain signs?",
+      answer: "Classic porcelain signs are durable, enamel-coated metal signs originally used for advertising in the early to mid-1900s. Known for their glossy finish and vibrant colors, they’ve become collector favorites and statement décor pieces today by porcelain enamel sign collectors and enthusiasts."
     },
     {
-      question: "How do I upgrade from the free plan to a paid plan?",
-      answer: "You can upgrade by contacting us through our website or by selecting one of our paid plans on the pricing page. Our team will assist you with the process."
+      question: "Are our porcelain signs original or reproductions?",
+      answer: "We offer both authentic vintage porcelain signs and high-quality reproductions. Each listing clearly mentions whether the sign is original or a replica, along with condition details and age estimates."
     },
     {
-      question: "What are the benefits of the paid SEO plans?",
-      answer: "Our paid SEO plans offer comprehensive keyword research, on-page optimization, link building, technical SEO, local SEO, and content marketing. These services are designed to improve your website's visibility and ranking significantly."
+      question: "What makes porcelain signs valuable?",
+      answer: "Porcelain signs hold value due to their historical significance, brand rarity, and condition. Signs from popular brands like Coca-Cola, Texaco, or Shell are often sought after by collectors for their nostalgic and investment value."
     },
     {
-      question: "How long does it take to see results from SEO?",
-      answer: "SEO is a long-term strategy, and while some improvements can be seen in a few weeks, significant results usually take 3 to 6 months depending on the competition, your website’s current status, and the SEO strategy implemented."
+      question: "How are porcelain signs made?",
+      answer: "Traditional porcelain signs are crafted by fusing powdered glass onto steel sheets at high temperatures. This process creates a glossy, weather-resistant surface that maintains its color and design for decades."
     },
     {
-      question: "Do you offer local SEO services?",
-      answer: "Yes, we provide local SEO services to help your business rank higher in local search results. This includes optimizing Google My Business profiles, managing local listings, and creating geo-targeted content."
+      question: "Do you make custom enamel or porcelain signs?",
+      answer: "Yes, we specialize in custom porcelain signs for homes, businesses, and collectors. From retro gas station logos to personalized garage plaques, we can create designs that reflect your style or brand identity."
     },
     {
-      question: "Can you guarantee first-page rankings on Google?",
-      answer: "No SEO provider can guarantee first-page rankings on Google. However, we follow best practices and use proven strategies to significantly improve your website’s visibility and search engine rankings."
+      question: "How do I care for and maintain a porcelain sign?",
+      answer: "Porcelain signs are low-maintenance. Simply wipe them with a soft damp cloth and avoid abrasive cleaners or harsh scrubbing. For vintage originals, gentle handling preserves the enamel and patina value."
     },
     {
-      question: "What is the difference between on-page and off-page SEO?",
-      answer: "On-page SEO involves optimizing elements on your website such as content, meta tags, and internal linking. Off-page SEO focuses on external factors like backlinks, social signals, and online mentions that improve your site’s authority and ranking."
+      question: "How do I know if a porcelain sign is authentic?",
+      answer: "Original porcelain signs often feature layered enamel, visible rusting on steel edges, and slight imperfections from hand production. We provide detailed images and authentication notes for each sign listed."
     },
     {
-      question: "Do I need to make changes to my website for SEO to work?",
-      answer: "Yes, SEO often requires changes to your website’s content, structure, and technical elements. Our team will provide detailed recommendations or make changes directly with your approval to ensure your site is fully optimized."
+      question: "Do we ship internationally?",
+      answer: "Yes, we offer worldwide shipping with protective packaging to ensure your sign arrives in perfect condition. Delivery times vary based on location and size of the sign."
     },
     {
-      question: "How do you track the success of an SEO campaign?",
-      answer: "We use a combination of tools such as Google Analytics, Search Console, and third-party SEO tools to track key metrics like organic traffic, keyword rankings, backlinks, and conversion rates. You’ll receive regular reports detailing these metrics."
+      question: "Can I restore or repair my old porcelain sign?",
+      answer: "We offer porcelain sign restoration services for damaged or faded signs. Our restoration experts match original colors and finishes to bring your vintage signage back to life while maintaining authenticity."
     },
     {
-      question: "What is technical SEO, and do you offer it?",
-      answer: "Technical SEO focuses on improving the backend aspects of your website, such as site speed, mobile-friendliness, structured data, and crawlability. Yes, we offer technical SEO services to ensure your website performs optimally for search engines."
+      question: "What payment methods do you accept?",
+      answer: "We accept major cards, PayPal, and secure online bank transfers. All transactions are encrypted to protect your data."
     },
     {
-      question: "Will I need to continue paying for SEO after achieving good rankings?",
-      answer: "Yes, SEO is an ongoing process. Even after achieving good rankings, it’s important to continue optimizing and maintaining your website to retain and improve your rankings over time."
+      question: "What is our return policy?",
+      answer: "Custom or restored items are non-returnable."
+    },
+    {
+      question: "Can you bulk order porcelain signs for your business or project?",
+      answer: "Absolutely. We handle bulk and wholesale orders. Contact us for custom quotes and bulk pricing."
     }
   ];
 
@@ -74,4 +79,3 @@ const FAQ = () => {
 };
 
 export default FAQ;
-

@@ -5,7 +5,6 @@ import whyImg from '../../assets/images/why.png';
 const Why = () => {
   return (
     <section className="why-section">
-      <h2 className="why-heading">Why Choose Us</h2>
 
       <div className="why-card">
         <div className="why-image">
