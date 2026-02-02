@@ -4,7 +4,7 @@ import './HERO.css';
 import hor1 from '../../assets/images/hor1.png';
 import hor5 from '../../assets/images/hor5.png';
 import hor2 from '../../assets/images/hor2.png';
-import hor3 from '../../assets/images/hor3.png';
+import hor3 from '../../assets/images/hor8.jpg';
 
 const slides = [
   {

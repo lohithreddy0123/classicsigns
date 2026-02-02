@@ -1,6 +1,6 @@
 import React from 'react';
 import './why.css';
-import whyImg from '../../assets/images/why.png';
+import whyImg from '../../assets/images/why.jpg';
 
 const Why = () => {
   return (

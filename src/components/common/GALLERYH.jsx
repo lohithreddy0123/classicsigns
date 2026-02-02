@@ -7,15 +7,15 @@ import hor7 from "../../assets/images/hor7.jpg";
 import hor8 from "../../assets/images/hor8.jpg";
 import hor9 from "../../assets/images/hor9.jpg";
 import hor10 from "../../assets/images/hor10.jpg";
-import hor11 from "../../assets/images/hor11.png";
-import hor13 from "../../assets/images/hor13.png";
+import hor11 from "../../assets/images/hor11.jpg";
+import hor13 from "../../assets/images/hor13.jpg";
 
 import ver1 from "../../assets/images/ver1.png";
-import ver12 from "../../assets/images/ver12.png";
+import ver12 from "../../assets/images/ver12.jpg";
 import ver2 from "../../assets/images/ver2.jpg";
 import ver3 from "../../assets/images/ver3.jpg";
-import ver4 from "../../assets/images/ver4.png";
-import ver5 from "../../assets/images/ver5.png";
+import ver4 from "../../assets/images/ver4.jpg";
+import ver5 from "../../assets/images/ver5.jpg";
 
 import round from "../../assets/images/roundsigns.jpg";
 import neon from "../../assets/images/neon-licence.jpg";
