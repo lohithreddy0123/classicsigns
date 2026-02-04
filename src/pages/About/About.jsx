@@ -12,16 +12,19 @@ const About = () => {
   return (
     <>
       <HEAD2 />
-      <WHY />
 
+
+      <CollageH />
+      <WHY />
       {/* Mobile only */}
       <CommonV1 />
-      <CommonV />
+
 
       {/* Desktop only */}
-      <CollageH />
+
 
       <CTA2 />
+      <CommonV />
       <FAQ />
     </>
   );
