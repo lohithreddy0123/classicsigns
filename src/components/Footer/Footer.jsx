@@ -1,14 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './footer.css';
-import logo from '../../assets/images/logo.jpg';
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-section footer-logo">
         <Link to="/">
-          <img src={logo} alt="Classic Porcelain Signs Logo" className="logo" />
+          <img
+            src="https://raw.githubusercontent.com/lohithreddy0123/assets/main/logo.jpg"
+            alt="Classic Porcelain Signs Logo"
+            className="logo"
+          />
         </Link>
       </div>
 
