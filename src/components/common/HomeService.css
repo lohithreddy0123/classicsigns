@@ -1,5 +1,6 @@
 .home-services {
-  padding: 100px 6%;
+  padding: 10px 6%;
+  padding-bottom: 20px;
 }
 
 /* Title */
@@ -123,7 +124,8 @@
 
 @media (max-width: 640px) {
   .home-services {
-    padding: 70px 5%;
+    padding: 10px 5%;
+    padding-bottom: 50px;
   }
 
   .services-title {

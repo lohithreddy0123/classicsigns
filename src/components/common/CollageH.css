@@ -1,0 +1,18 @@
+.collage-h {
+  display: block;
+  /* visible by default */
+  width: 100%;
+  margin: 0 auto;
+}
+
+.collage-h .common-image {
+  width: 100%;
+  border-radius: 16px;
+}
+
+/* Hide on small screens */
+@media (max-width: 640px) {
+  .collage-h {
+    display: none;
+  }
+}

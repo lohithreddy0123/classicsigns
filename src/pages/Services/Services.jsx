@@ -1,6 +1,6 @@
 import HEAD from '../../components/common/HEAD'
 import SERV from '../../components/common/SERV'
-import CTA2 from '../../components/common/CTA2'
+import CTA1 from '../../components/common/CTA1'
 import WITHCLASSIC from '../../components/common/WITHCLASSIC'
 
 const Services = () => {
@@ -9,7 +9,7 @@ const Services = () => {
       <HEAD />
       <SERV />
 
-      <CTA2 />
+      <CTA1 />
       <WITHCLASSIC />
     </>
   )

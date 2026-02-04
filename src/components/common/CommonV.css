@@ -1,0 +1,18 @@
+.common-v {
+  display: none;
+  /* hidden by default */
+  width: 100%;
+  margin: 0 auto;
+}
+
+.common-v .common-image {
+  width: 100%;
+  border-radius: 16px;
+}
+
+/* Show only on small screens */
+@media (max-width: 640px) {
+  .common-v {
+    display: block;
+  }
+}
