@@ -4,8 +4,9 @@ import './contact.css'
 const Contact = () => {
   const [form, setForm] = useState({
     name: '',
+    email: '',
     phone: '',
-    location: '',
+    website: '',
     message: ''
   })
 
@@ -27,8 +28,9 @@ const Contact = () => {
       setSubmitted(false)
       setForm({
         name: '',
+        email: '',
         phone: '',
-        location: '',
+        website: '',
         message: ''
       })
     }, 3000)
@@ -52,21 +54,28 @@ const Contact = () => {
             />
 
             <input
-              type="text"
-              name="phone"
-              placeholder="Phone Number"
-              value={form.phone}
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              value={form.email}
               onChange={handleChange}
               required
             />
 
             <input
               type="text"
-              name="location"
-              placeholder="City & Country"
-              value={form.location}
+              name="phone"
+              placeholder="Phone Number"
+              value={form.phone}
               onChange={handleChange}
-              required
+            />
+
+            <input
+              type="text"
+              name="website"
+              placeholder="Website URL"
+              value={form.website}
+              onChange={handleChange}
             />
 
             <textarea
@@ -74,7 +83,6 @@ const Contact = () => {
               placeholder="Tell us about your project"
               value={form.message}
               onChange={handleChange}
-              required
             />
 
             <button type="submit">
@@ -90,21 +98,24 @@ const Contact = () => {
         </div>
 
         {/* INFO */}
+        {/* INFO */}
         <div className="contact-info">
           <h2>What Happens Next?</h2>
 
-          <h3>Meeting Scheduled</h3>
-          <p>We'll contact you within 24 hours to book a call.</p>
+          <h3>Request Received</h3>
+          <p>We review your enquiry and project requirements.</p>
 
-          <h3>Project Discussion</h3>
-          <p>We’ll explore your signage needs and objectives.</p>
+          <h3>Factory Response</h3>
+          <p>Our team replies with details on options and availability.</p>
 
-          <h3>Plan Selection</h3>
-          <p>Choose the best approach for your project.</p>
+          <h3>Design & Production</h3>
+          <p>We confirm details and begin creating your sign.</p>
 
-          <h3>Let’s Get Started!</h3>
-          <p>Once confirmed, we’ll begin production.</p>
+          <h3>Worldwide Delivery</h3>
+          <p>Your finished sign is packed and shipped globally.</p>
         </div>
+
+
       </div>
     </section>
   )
