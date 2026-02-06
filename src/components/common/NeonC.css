@@ -1,0 +1,20 @@
+.neonC {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* True full-width wrapper */
+.neonC-container {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+/* Image takes entire horizontal space */
+.neonC-image {
+  width: 100vw;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}

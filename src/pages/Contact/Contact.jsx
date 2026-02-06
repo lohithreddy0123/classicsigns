@@ -4,9 +4,8 @@ import './contact.css'
 const Contact = () => {
   const [form, setForm] = useState({
     name: '',
-    email: '',
     phone: '',
-    website: '',
+    location: '',
     message: ''
   })
 
@@ -28,9 +27,8 @@ const Contact = () => {
       setSubmitted(false)
       setForm({
         name: '',
-        email: '',
         phone: '',
-        website: '',
+        location: '',
         message: ''
       })
     }, 3000)
@@ -54,28 +52,21 @@ const Contact = () => {
             />
 
             <input
-              type="email"
-              name="email"
-              placeholder="Email Address"
-              value={form.email}
+              type="text"
+              name="phone"
+              placeholder="Phone Number"
+              value={form.phone}
               onChange={handleChange}
               required
             />
 
             <input
               type="text"
-              name="phone"
-              placeholder="Phone Number"
-              value={form.phone}
+              name="location"
+              placeholder="City & Country"
+              value={form.location}
               onChange={handleChange}
-            />
-
-            <input
-              type="text"
-              name="website"
-              placeholder="Website URL"
-              value={form.website}
-              onChange={handleChange}
+              required
             />
 
             <textarea
@@ -83,6 +74,7 @@ const Contact = () => {
               placeholder="Tell us about your project"
               value={form.message}
               onChange={handleChange}
+              required
             />
 
             <button type="submit">
@@ -105,16 +97,14 @@ const Contact = () => {
           <p>We'll contact you within 24 hours to book a call.</p>
 
           <h3>Project Discussion</h3>
-          <p>We’ll explore your SEO needs and objectives.</p>
+          <p>We’ll explore your signage needs and objectives.</p>
 
           <h3>Plan Selection</h3>
-          <p>Choose the best plan to meet your goals.</p>
+          <p>Choose the best approach for your project.</p>
 
           <h3>Let’s Get Started!</h3>
-          <p>Once confirmed, we’ll begin optimizing right away.</p>
+          <p>Once confirmed, we’ll begin production.</p>
         </div>
-
-
       </div>
     </section>
   )

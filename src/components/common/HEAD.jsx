@@ -9,8 +9,8 @@ const Head = () => {
           BECAUSE BORING<br />IS BAD FOR<br />BUSINESS
         </h1>
         <p className="head-subtitle">
-          As a full-service agency with over 20 years of experience in film and video production,
-          we do everything to find and tell your best story.
+          From rare 72-inch porcelain signs to fully custom enamel and neon work,
+          we design, manufacture, and deliver signage built to stand apart.
         </p>
       </div>
     </section>

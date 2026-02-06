@@ -4,6 +4,7 @@ import WHY from '../../components/common/WHY';
 import CTA2 from '../../components/common/CTA2';
 import FAQ from '../../components/common/FAQ';
 
+
 import CommonV1 from '../../components/common/CommonV1';
 import CommonV from '../../components/common/CommonV';
 import SeventyTwo from '../../components/common/SeventyTwo';
@@ -16,6 +17,7 @@ const About = () => {
 
       <WHY />
       <CollageH />
+      <CommonV />
       <SeventyTwo />
 
       {/* Mobile only */}
@@ -26,7 +28,7 @@ const About = () => {
 
 
       <CTA2 />
-      <CommonV />
+
       <FAQ />
     </>
   );

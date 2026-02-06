@@ -21,14 +21,15 @@
 ====================== */
 .contact-container {
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
+  /* ✅ true centering */
   display: flex;
   gap: 40px;
   align-items: stretch;
-  /* equal height */
-  justify-content: flex-start;
-  padding-right: 20px;
-  /* spacing from right */
+  justify-content: center;
+  /* ✅ center horizontally */
+  padding: 0;
+  /* ✅ remove side bias */
 }
 
 /* ======================
@@ -42,6 +43,8 @@
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
   display: flex;
   flex-direction: column;
+  align-items: center;
+  /* ✅ center content */
   justify-content: flex-start;
 }
 
@@ -49,6 +52,13 @@
   margin-bottom: 30px;
   font-size: 2.2rem;
   text-align: center;
+}
+
+/* form width control */
+.contact-form form {
+  width: 100%;
+  max-width: 480px;
+  /* ✅ clean centered column */
 }
 
 .contact-form input,
@@ -107,18 +117,16 @@
 .contact-info {
   flex: 1;
   background: #0a0f1f;
-  /* darker theme */
   border-radius: 20px;
   border: 2px solid #1e90ff;
   padding: 50px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
+  /* ✅ vertical centering */
   gap: 25px;
   min-height: 100%;
-  /* match form height */
-  margin-right: 0px;
-  /* spacing from container right */
+  text-align: left;
 }
 
 .contact-info h2 {
@@ -161,12 +169,10 @@
   .contact-form,
   .contact-info {
     padding: 30px;
-    margin-right: 0;
   }
 
   .contact-info {
     text-align: center;
-    border: 2px solid #1e90ff;
   }
 
   .contact-info h2 {
@@ -181,15 +187,6 @@
     font-size: 1.1rem;
     justify-content: center;
     padding-left: 0;
-  }
-
-  .contact-info p::before {
-    font-size: 1.2rem;
-  }
-
-  .contact-page {
-    padding: 30px 15px 40px;
-    overflow-y: auto;
   }
 }
 
@@ -211,9 +208,5 @@
   .contact-info p {
     font-size: 1rem;
     gap: 8px;
-  }
-
-  .contact-info p::before {
-    font-size: 1.1rem;
   }
 }

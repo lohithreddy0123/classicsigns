@@ -19,8 +19,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #000000;
-  padding: 10px 20px;
+  background-color: transparent;
+  padding: 0px 20px;
   /* desktop padding */
 }
 

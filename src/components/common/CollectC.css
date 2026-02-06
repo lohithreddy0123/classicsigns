@@ -1,0 +1,27 @@
+.collectC {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+.collectC-container {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+/* Image */
+.collectC-image {
+  width: 100vw;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* ❌ HIDE ON TABLET & DESKTOP */
+@media (min-width: 768px) {
+  .collectC {
+    display: none;
+  }
+}
