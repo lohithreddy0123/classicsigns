@@ -6,6 +6,7 @@ import FAQ from '../../components/common/FAQ';
 
 import CommonV1 from '../../components/common/CommonV1';
 import CommonV from '../../components/common/CommonV';
+import SeventyTwo from '../../components/common/SeventyTwo';
 import CollageH from '../../components/common/CollageH';
 
 const About = () => {
@@ -13,9 +14,10 @@ const About = () => {
     <>
       <HEAD2 />
 
-
-      <CollageH />
       <WHY />
+      <CollageH />
+      <SeventyTwo />
+
       {/* Mobile only */}
       <CommonV1 />
 
