@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
-import './HERO.css';
+import React, { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
+import "./HERO.css";
 
-import hor1 from '../../assets/images/hor1.png';
-import hor5 from '../../assets/images/hor5.png';
-import hor2 from '../../assets/images/hor2.png';
-import hor3 from '../../assets/images/hor8.jpg';
+import hor1 from "../../assets/images/hor1.png";
+import hor5 from "../../assets/images/hor5.png";
+import hor2 from "../../assets/images/hor2.png";
+import hor3 from "../../assets/images/hor8.jpg";
 
 const slides = [
   {
@@ -33,11 +34,13 @@ const HERO = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const touchStartX = useRef(null);
   const touchEndX = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % slides.length);
     }, 5000);
+
     return () => clearInterval(interval);
   }, []);
 
@@ -59,6 +62,10 @@ const HERO = () => {
     touchEndX.current = null;
   };
 
+  const handleQuoteClick = () => {
+    navigate("/contact");
+  };
+
   return (
     <section
       className="hero-carousel"
@@ -68,7 +75,7 @@ const HERO = () => {
       {slides.map((slide, index) => (
         <div
           key={index}
-          className={`hero-slide ${index === currentIndex ? 'active' : ''}`}
+          className={`hero-slide ${index === currentIndex ? "active" : ""}`}
         >
           <div className="hero-image-wrapper">
             <img
@@ -82,17 +89,25 @@ const HERO = () => {
             <div className="hero-content">
               <h1>{slide.title}</h1>
               <p>{slide.subtitle}</p>
-              <a href="#contact" className="hero-btn">Get a Quote</a>
+
+              {/* CTA */}
+              <button
+                className="hero-btn"
+                onClick={handleQuoteClick}
+              >
+                Get a Quote
+              </button>
             </div>
           </div>
         </div>
       ))}
 
+      {/* Dots */}
       <div className="hero-dots">
         {slides.map((_, idx) => (
           <span
             key={idx}
-            className={`dot ${currentIndex === idx ? 'active' : ''}`}
+            className={`dot ${currentIndex === idx ? "active" : ""}`}
             onClick={() => setCurrentIndex(idx)}
           />
         ))}
