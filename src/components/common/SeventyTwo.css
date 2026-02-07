@@ -1,23 +1,52 @@
 .seventyTwo {
   width: 100%;
-  padding: 0rem 0;
+  padding: 1rem 0;
+
+  display: flex;
+  justify-content: center;
 }
 
-/* FULL WIDTH CONTAINER */
+/* =========================
+   FRAMED CONTAINER
+========================= */
 .seventyTwo-container {
   width: 100%;
+  max-width: 1400px;
+
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   align-items: stretch;
 
+  position: relative;
+  overflow: hidden;
 
-  background: transparent;
+  border-radius: 24px;
+
+  /* SAME RADIAL LOGIC AS BODY THEME */
+  background:
+    radial-gradient(circle at center,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.9) 45%,
+      rgba(2, 11, 28, 0.9) 65%,
+      rgba(4, 26, 58, 0.9) 85%,
+      rgba(6, 42, 102, 0.9) 100%);
+
+  /* VISIBLE THEME FRAME */
+  border: 1px solid rgba(90, 150, 255, 0.35);
+
+  /* DEPTH + BLUE EDGE ENERGY */
+  box-shadow:
+    0 35px 90px rgba(0, 0, 0, 0.75),
+    0 0 70px rgba(60, 120, 255, 0.35),
+    inset 0 0 45px rgba(60, 120, 255, 0.15);
 }
 
-
-/* IMAGE SIDE */
+/* =========================
+   IMAGE SIDE
+========================= */
 .seventyTwo-imageBox {
-  padding: 3rem 2rem 3rem 4rem;
+  padding: 3.5rem 2.5rem 3.5rem 4rem;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,62 +56,83 @@
   max-width: 100%;
   max-height: 520px;
   object-fit: contain;
-  border-radius: 14px;
 
+  border-radius: 14px;
   background: #000;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.6);
 }
 
-/* CONTENT SIDE */
+/* =========================
+   CONTENT SIDE
+========================= */
 .seventyTwo-content {
-  padding: 4rem 4rem 4rem 2rem;
+  padding: 4rem 4rem 4rem 2.5rem;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   max-width: 640px;
 }
 
+/* Badge */
 .badge {
   width: fit-content;
   padding: 6px 14px;
+
   font-size: 0.75rem;
   letter-spacing: 1px;
   text-transform: uppercase;
+
   border-radius: 20px;
-  background: rgba(90, 120, 255, 0.15);
+
+  background: rgba(90, 120, 255, 0.18);
   color: #b6c9ff;
+
   margin-bottom: 1.2rem;
 }
 
+/* Heading */
 .seventyTwo-content h2 {
   font-size: 2.8rem;
   line-height: 1.1;
   margin-bottom: 1rem;
+
+  color: #ffffff;
 }
 
+/* Lead text */
 .seventyTwo-content .lead {
   font-size: 1.15rem;
   color: #cfd9ff;
   margin-bottom: 1.6rem;
 }
 
+/* Paragraphs */
 .seventyTwo-content p {
   font-size: 0.95rem;
   line-height: 1.75;
   margin-bottom: 1rem;
+
   color: #e3e8ff;
 }
 
+/* Shipping / footer note */
 .seventyTwo-content .shipping {
   margin-top: 1.6rem;
   font-size: 0.9rem;
   color: #9fb2ff;
 }
 
-/* TABLET */
+/* =========================
+   TABLET
+========================= */
 @media (max-width: 992px) {
   .seventyTwo-container {
     grid-template-columns: 1fr;
+    border-radius: 20px;
   }
 
   .seventyTwo-imageBox {
@@ -95,7 +145,9 @@
   }
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 @media (max-width: 576px) {
   .seventyTwo-imageBox img {
     max-height: 320px;

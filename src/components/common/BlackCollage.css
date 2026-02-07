@@ -1,0 +1,82 @@
+.blackCollage {
+  width: 100%;
+  padding: 3.5rem 0;
+
+  display: flex;
+  justify-content: center;
+}
+
+/* =========================
+   FRAMED CONTAINER
+========================= */
+.blackCollage-container {
+  position: relative;
+
+  width: 100%;
+  max-width: 1400px;
+  padding: 14px;
+
+  border-radius: 22px;
+
+  /* SAME RADIAL DNA AS BODY */
+  background:
+    radial-gradient(circle at center,
+      rgba(0, 0, 0, 0.92) 0%,
+      rgba(0, 0, 0, 0.92) 45%,
+      rgba(2, 11, 28, 0.9) 65%,
+      rgba(4, 26, 58, 0.9) 85%,
+      rgba(6, 42, 102, 0.9) 100%);
+
+  /* REAL FRAME */
+  border: 1px solid rgba(90, 150, 255, 0.35);
+
+  /* DEPTH + BLUE EDGE ENERGY */
+  box-shadow:
+    0 35px 90px rgba(0, 0, 0, 0.75),
+    0 0 70px rgba(60, 120, 255, 0.35),
+    inset 0 0 45px rgba(60, 120, 255, 0.15);
+}
+
+/* =========================
+   IMAGE
+========================= */
+.blackCollage-image {
+  width: 100%;
+  height: auto;
+  display: block;
+
+  border-radius: 14px;
+
+  background: #000;
+
+  box-shadow:
+    0 22px 60px rgba(0, 0, 0, 0.8);
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 900px) {
+  .blackCollage {
+    padding: 2.5rem 0;
+  }
+
+  .blackCollage-container {
+    padding: 12px;
+    border-radius: 18px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 600px) {
+  .blackCollage {
+    padding: 1rem 0;
+  }
+
+  .blackCollage-container {
+    padding: 8px;
+    border-radius: 14px;
+  }
+}

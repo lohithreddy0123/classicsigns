@@ -1,16 +1,47 @@
 .collage-h {
+  position: relative;
+
   display: block;
-  /* visible by default */
   width: 100%;
-  margin: 0 auto;
+  max-width: 1400px;
+  margin: 48px auto;
+
+  padding: 14px;
+
+  border-radius: 20px;
+
+  /* RADIAL FRAME — SAME LOGIC AS BODY */
+  background:
+    radial-gradient(circle at center,
+      rgba(0, 0, 0, 0.85) 0%,
+      rgba(0, 0, 0, 0.85) 45%,
+      rgba(2, 11, 28, 0.85) 65%,
+      rgba(4, 26, 58, 0.85) 85%,
+      rgba(6, 42, 102, 0.85) 100%);
+
+  /* REAL FRAME */
+  border: 1px solid rgba(90, 150, 255, 0.35);
+
+  /* DEPTH + EDGE ENERGY */
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.75),
+    0 0 60px rgba(40, 120, 255, 0.35),
+    inset 0 0 40px rgba(40, 120, 255, 0.18);
 }
 
+/* IMAGE */
 .collage-h .common-image {
   width: 100%;
-  border-radius: 16px;
+  display: block;
+
+  border-radius: 14px;
+
+  /* separation */
+  box-shadow:
+    0 18px 50px rgba(0, 0, 0, 0.8);
 }
 
-/* Hide on small screens */
+/* HIDE ON MOBILE */
 @media (max-width: 640px) {
   .collage-h {
     display: none;
