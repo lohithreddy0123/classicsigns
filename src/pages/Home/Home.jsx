@@ -7,6 +7,7 @@ import HomeService from '../../components/common/HomeService'
 import GallerySection from '../../components/common/GallerySection'
 import CTA2 from '../../components/common/CTA2'
 import WITHCLASSIC from '../../components/common/WITHCLASSIC'
+import USPartner from '../../components/common/USPartner'
 
 const Home = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -26,7 +27,10 @@ const Home = () => {
       <INTRO />
       <GALLERYH />
       <HomeService />
-      <CTA2 />
+
+      <USPartner />
+
+
       <GallerySection />
       <AdvCTA />
     </>
