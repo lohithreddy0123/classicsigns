@@ -1,19 +1,14 @@
 /* Updated Styling for Main Headline (h1) */
 .main-headline {
   font-family: "Roboto", sans-serif;
-  /* Clean and modern font */
   font-size: 3em;
-  /* Slightly larger for main headline */
   font-weight: 700;
-  /* Bold for prominence */
   color: #ffffff;
   background: linear-gradient(to right, #00acc1, #004d40);
-  /* Gradient accent */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 20px;
   text-align: center;
-  /* Center-align for emphasis */
 }
 
 #introduction-section {
@@ -52,11 +47,13 @@
   max-width: 600px;
 }
 
-.introduction-animation video {
+.introduction-animation img {
   width: 100%;
   height: auto;
   border-radius: 20%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: block;
+  margin: 0 auto;
 }
 
 @media (max-width: 480px) {
@@ -67,6 +64,5 @@
 
   .main-headline {
     font-size: 2em;
-    /* smaller, normal heading size for mobile */
   }
 }

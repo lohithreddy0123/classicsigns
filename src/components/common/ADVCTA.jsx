@@ -26,7 +26,7 @@ const AdvCTA = () => {
           </svg>
           <div>
             <strong>Phone (India):</strong>
-            <span>90631 43344</span>
+            <span>+91 98205 77396</span>
             <p className="subtext">Call for inquiries or custom orders anytime.</p>
           </div>
         </div>
@@ -44,7 +44,7 @@ const AdvCTA = () => {
           </svg>
           <div>
             <strong>Phone (US):</strong>
-            <span>81001 10011</span>
+            <span>+1 816 261 5697</span>
             <p className="subtext">For international customers and inquiries at any time.</p>
           </div>
         </div>

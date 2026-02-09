@@ -1,6 +1,6 @@
 import React from "react";
 import "./intro.css";
-import porcelainVideo from "../../assets/videos/porcelain-signs.mp4"; // Optional video of your signs
+import roundImage from "../../assets/images/round.png"; // Updated to your image
 
 const Intro = () => {
   return (
@@ -21,10 +21,7 @@ const Intro = () => {
       </div>
 
       <div className="introduction-animation">
-        <video autoPlay loop muted>
-          <source src={porcelainVideo} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        <img src={roundImage} alt="Round Porcelain Sign" />
       </div>
     </div>
   );

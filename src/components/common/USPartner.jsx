@@ -13,7 +13,7 @@ const USPartner = () => {
           className="us-partner-image"
         />
 
-        <h3 className="us-partner-name">Chris Harris</h3>
+        <h3 className="us-partner-name">TY HUFFER</h3>
 
         <p className="us-partner-desc">
           A trusted part of our porcelain signs brand, closely connected with our
@@ -21,8 +21,8 @@ const USPartner = () => {
         </p>
 
         <div className="us-partner-contact">
-          <span>📞 +1 555 123 4567</span>
-          <span>✉️ chris@porcelainsigns.com</span>
+          <span>📞 +1 816 261 5697</span>
+          <span>✉️ tyhuffer@gmail.com</span>
         </div>
       </div>
     </section>
