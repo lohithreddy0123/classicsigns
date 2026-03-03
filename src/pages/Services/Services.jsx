@@ -1,5 +1,5 @@
 import HEAD from '../../components/common/HEAD'
-import SERV from '../../components/common/SERV'
+import SERV from '../../components/common/serv'
 import CTA1 from '../../components/common/CTA1'
 import NeonC from '../../components/common/NeonC'
 import WITHCLASSIC from '../../components/common/WITHCLASSIC'

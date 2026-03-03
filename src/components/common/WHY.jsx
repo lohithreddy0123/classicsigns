@@ -1,6 +1,6 @@
 import React from 'react';
-import './why.css';
-import whyImg from '../../assets/images/why.jpg';
+import './WHY.css';
+import whyImg from '../../assets/images/WHY.jpg';
 
 const Why = () => {
   return (
@@ -8,25 +8,30 @@ const Why = () => {
 
       <div className="why-card">
         <div className="why-image">
-          <img src={whyImg} alt="Why Choose Us" />
+          <img src={whyImg} alt="Round Signs, Die Cut Signs, Press Signs and Glass Globe" />
         </div>
         <div className="why-content">
           <p>
-            We specialize in <strong>classic porcelain enamel signs</strong>,
-            including large 72-inch vintage pieces and fully customized designs.
-            Built to last for decades and delivered worldwide.
+            We craft <strong>classic porcelain enamel signs</strong> — including 
+            <strong> round signs</strong>, <strong>die cut signs</strong>, 
+            <strong> press signs</strong>, <strong>thermometers</strong>, and 
+            large <strong>flanges 72</strong> built for lasting impact worldwide.
           </p>
+
           <ul className="why-features">
-            <li><span className="icon">📏</span> 72-inch large vintage signs</li>
-            <li><span className="icon">🎨</span> Custom-made designs</li>
-            <li><span className="icon">🌦️</span> Weather-resistant enamel finish</li>
-            <li><span className="icon">🌍</span> International delivery available</li>
+            <li><span className="icon">📏</span> 72-inch round signs & flanges 72 displays</li>
+            <li><span className="icon">🎨</span> Custom die cut signs, buttons & flanges</li>
+            <li><span className="icon">🌦️</span> Weather-resistant press signs & thermometers</li>
+            <li><span className="icon">💡</span> Glass globe, spinners & neon skins</li>
+            <li><span className="icon">🌍</span> Worldwide manufacturing & delivery</li>
           </ul>
-          <a href="contact" className="why-btn">Let’s Connect</a>
+
+          <a href="contact" className="why-btn">
+            Start Your Custom Sign Project →
+          </a>
         </div>
       </div>
     </section>
-
   );
 };
 

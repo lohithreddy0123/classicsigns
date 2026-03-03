@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import HERO from '../../components/common/HERO'
 import INTRO from '../../components/common/INTRO'
 import GALLERYH from '../../components/common/GALLERYH'
-import AdvCTA from '../../components/common/advcta'
+import AdvCTA from '../../components/common/ADVCTA'
 import HomeService from '../../components/common/HomeService'
 import GallerySection from '../../components/common/GallerySection'
 import CTA2 from '../../components/common/CTA2'

@@ -1,4 +1,4 @@
-import './head2.css';
+import './HEAD2.css';
 
 const Head2 = () => {
   return (

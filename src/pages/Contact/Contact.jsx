@@ -16,25 +16,40 @@ const Contact = () => {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-    // simulate frontend-only submit
-    console.log('Form Data:', form)
+    console.log("📤 Submitting form:", form);
 
-    setSubmitted(true)
+    try {
+      const res = await fetch("/api/send-contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
 
-    setTimeout(() => {
-      setSubmitted(false)
+      console.log("📡 Response status:", res.status);
+
+      const data = await res.json();
+      console.log("📨 Response body:", data);
+
+      if (!res.ok) throw new Error("Request failed");
+
+      console.log("✅ Email sent successfully");
+
+      setSubmitted(true);
       setForm({
-        name: '',
-        email: '',
-        phone: '',
-        website: '',
-        message: ''
-      })
-    }, 3000)
-  }
+        name: "",
+        email: "",
+        phone: "",
+        website: "",
+        message: "",
+      });
+    } catch (err) {
+      console.error("❌ Frontend error:", err);
+      alert("Failed to send message");
+    }
+  };
 
   return (
     <section className="contact-page">
@@ -91,7 +106,7 @@ const Contact = () => {
 
             {submitted && (
               <p className="success-msg">
-                ✅ Message submitted (frontend only)
+                ✅ Message sent successfully. We’ll contact you shortly.
               </p>
             )}
           </form>

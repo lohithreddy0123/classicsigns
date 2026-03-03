@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import "./galleryh.css";
+import "./GALLERYH.css";
 
 /* Images */
 import hor6 from "../../assets/images/hor6.jpg";
@@ -17,7 +17,7 @@ import ver3 from "../../assets/images/ver3.jpg";
 import ver4 from "../../assets/images/ver4.jpg";
 import ver5 from "../../assets/images/ver5.jpg";
 
-import round from "../../assets/images/roundsigns.jpg";
+import round from "../../assets/images/roundsigns.png";
 import neon from "../../assets/images/neon-licence.jpg";
 import logos from "../../assets/images/logos.jpg";
 

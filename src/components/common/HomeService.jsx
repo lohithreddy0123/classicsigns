@@ -2,7 +2,7 @@ import "./HomeService.css";
 
 import hor1 from "../../assets/images/hor1.png";
 import hor11 from "../../assets/images/hor11.jpg";
-import roundsigns from "../../assets/images/roundsigns.jpg";
+import roundsigns from "../../assets/images/roundsigns.png";
 
 const services = [
   {
@@ -19,7 +19,7 @@ const services = [
   },
   {
     img: hor11,
-    title: "Neon & Spinner Signs",
+    title: "Premium Neon Signs",
     desc:
       "Large-format neon and rotating signs built to create strong visual impact."
   }

@@ -1,5 +1,5 @@
 import React from "react";
-import "./intro.css";
+import "./INTRO.css";
 import roundImage from "../../assets/images/round.png"; // Updated to your image
 
 const Intro = () => {

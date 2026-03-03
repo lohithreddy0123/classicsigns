@@ -1,0 +1,2 @@
+/api/send-contact  https://us-central1-hazel-d9071.cloudfunctions.net/sendContactEmail  200
+/*  /index.html  200
