@@ -50,7 +50,6 @@
   padding: 8px 12px;
   border-radius: 5px;
   transition: all 0.3s;
-
 }
 
 .nav a:hover {
@@ -88,6 +87,7 @@
   background: #1E90FF;
 }
 
+/* Sidebar */
 .sidebar {
   position: fixed;
   top: 0;
@@ -106,7 +106,7 @@
   left: 0;
 }
 
-/* SIDEBAR LOGO */
+/* Sidebar Logo */
 .sidebar-logo {
   height: 90px;
   display: flex;
@@ -120,7 +120,7 @@
   width: 180px;
 }
 
-/* SIDEBAR NAV */
+/* Sidebar Nav */
 .sidebar-nav {
   padding: 30px 20px;
   display: flex;
@@ -142,7 +142,6 @@
   position: relative;
 }
 
-/* Hover animation */
 .sidebar-nav a::before {
   content: '';
   position: absolute;
@@ -167,7 +166,7 @@
   color: #1E90FF;
 }
 
-/* ================= OVERLAY ================= */
+/* Overlay */
 .overlay {
   position: fixed;
   inset: 0;
@@ -191,5 +190,42 @@
 
   .hamburger {
     display: flex;
+  }
+}
+
+/* ================= DESKTOP LOGO ELEVATED ================= */
+@media (min-width: 769px) {
+  .site-header {
+    overflow: visible;
+  }
+
+  .header-container {
+    height: 100px;
+    overflow: visible;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    overflow: visible;
+  }
+
+  .logo img {
+    width: auto;
+    height: 150px;
+    max-width: 440px;
+    margin-left: -10px;
+    position: relative;
+    z-index: 10;
+    filter: drop-shadow(0 6px 24px rgba(0, 0, 0, 0.8))
+            drop-shadow(0 2px 6px rgba(0, 0, 0, 0.9));
+    transition: transform 0.35s ease, filter 0.35s ease;
+  }
+
+  .logo img:hover {
+    transform: scale(1.04) translateY(-3px);
+    filter: drop-shadow(0 8px 28px rgba(30, 144, 255, 0.45))
+            drop-shadow(0 2px 8px rgba(0, 0, 0, 0.9));
   }
 }
