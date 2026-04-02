@@ -1,59 +1,70 @@
-import { useState } from 'react'
-import './contact.css'
+import { useState } from "react";
+import "./contact.css";
+
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { db } from "../../firebase";
 
 const Contact = () => {
   const [form, setForm] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    website: '',
-    message: ''
-  })
+    name: "",
+    email: "",
+    phone: "",
+    website: "",
+    message: ""
+  });
 
-  const [submitted, setSubmitted] = useState(false)
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value })
-  }
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log("📤 Submitting form:", form);
+    setLoading(true);
+    setSubmitted(false);
+    setError("");
 
     try {
-      const res = await fetch("/api/send-contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+      console.log("📤 Saving to Firestore:", form);
+
+      const docRef = await addDoc(collection(db, "contacts"), {
+        name: form.name,
+        email: form.email,
+        phone: form.phone,
+        website: form.website,
+        message: form.message,
+        createdAt: serverTimestamp(),
+        status: "pending"
       });
 
-      console.log("📡 Response status:", res.status);
-
-      const data = await res.json();
-      console.log("📨 Response body:", data);
-
-      if (!res.ok) throw new Error("Request failed");
-
-      console.log("✅ Email sent successfully");
+      console.log("✅ Saved to Firestore:", docRef.id);
 
       setSubmitted(true);
+
       setForm({
         name: "",
         email: "",
         phone: "",
         website: "",
-        message: "",
+        message: ""
       });
+
     } catch (err) {
-      console.error("❌ Frontend error:", err);
-      alert("Failed to send message");
+      console.error("❌ Firestore error:", err);
+      setError("Failed to send message. Please try again.");
     }
+
+    setLoading(false);
   };
 
   return (
     <section className="contact-page">
       <div className="contact-container">
+
         {/* FORM */}
         <div className="contact-form">
           <h1>Contact Us</h1>
@@ -98,21 +109,29 @@ const Contact = () => {
               placeholder="Tell us about your project"
               value={form.message}
               onChange={handleChange}
+              required
             />
 
-            <button type="submit">
-              Send Message
+            <button type="submit" disabled={loading}>
+              {loading ? "Sending..." : "Send Message"}
             </button>
 
+            {/* SUCCESS MESSAGE */}
             {submitted && (
               <p className="success-msg">
-                ✅ Message sent successfully. We’ll contact you shortly.
+                ✅ Message received successfully. Email notification sent to our team.
+              </p>
+            )}
+
+            {/* ERROR MESSAGE */}
+            {error && (
+              <p className="error-msg">
+                ❌ {error}
               </p>
             )}
           </form>
         </div>
 
-        {/* INFO */}
         {/* INFO */}
         <div className="contact-info">
           <h2>What Happens Next?</h2>
@@ -130,10 +149,9 @@ const Contact = () => {
           <p>Your finished sign is packed and shipped globally.</p>
         </div>
 
-
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

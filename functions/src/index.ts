@@ -1,49 +1,76 @@
-import { onRequest } from "firebase-functions/v2/https";
-import { defineSecret } from "firebase-functions/params";
-import { Resend } from "resend";
+import * as functions from "firebase-functions/v1";
+import * as admin from "firebase-admin";
+import nodemailer from "nodemailer";
 
-const RESEND_API_KEY = defineSecret("RESEND_API_KEY");
+admin.initializeApp();
 
-export const sendContactEmail = onRequest(
-  { secrets: [RESEND_API_KEY] },
-  async (req, res) => {
-    console.log("📥 Request received");
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: "lohithreddy0123@gmail.com",
+    pass: "YOUR_APP_PASSWORD"
+  }
+});
 
-    if (req.method !== "POST") {
-      console.log("❌ Invalid method:", req.method);
-      return res.status(405).send("Method Not Allowed");
-    }
+export const sendContactEmail = functions.firestore
+  .document("contacts/{docId}")
+  .onCreate(async (snap: any, context) => {
+    const data = snap.data();
+    const docId = context.params.docId;
 
-    console.log("📦 Body:", req.body);
+    console.log("📥 New Firestore contact received:", docId);
+    console.log("📄 Data:", data);
 
-    const { name, email, phone, website, message } = req.body;
+    const mailOptions = {
+      from: "Classic Signs <lohithreddy0123@gmail.com>",
+      to: "info@classicporcelainsigns.com",
+      subject: `New Lead: ${data.name}`,
+      html: `
+        <h2>🚀 New Contact Lead</h2>
+
+        <p><b>Name:</b> ${data.name}</p>
+        <p><b>Email:</b> ${data.email}</p>
+        <p><b>Phone:</b> ${data.phone || "-"}</p>
+        <p><b>Website:</b> ${data.website || "-"}</p>
+
+        <hr/>
+
+        <p><b>Message:</b></p>
+        <p>${data.message}</p>
+      `
+    };
 
     try {
-      const resend = new Resend(RESEND_API_KEY.value());
+      const result = await transporter.sendMail(mailOptions);
 
-      console.log("📤 Sending email via Resend...");
+      console.log("✅ EMAIL SENT SUCCESSFULLY");
+      console.log("📧 Message ID:", result.messageId);
+      console.log("📤 Sent To:", mailOptions.to);
+      console.log("👤 Lead Email:", data.email);
 
-      const result = await resend.emails.send({
-        from: "Contact Form <info@classicporcelainsigns.com>",
-        to: ["lohithreddy0123@gmail.com"], // ✅ SEND TO YOU
-        replyTo: email,
-        subject: "New Contact Form Submission",
-        html: `
-          <h2>New Contact Enquiry</h2>
-          <p><b>Name:</b> ${name}</p>
-          <p><b>Email:</b> ${email}</p>
-          <p><b>Phone:</b> ${phone || "-"}</p>
-          <p><b>Website:</b> ${website || "-"}</p>
-          <p><b>Message:</b> ${message}</p>
-        `,
-      });
+      // OPTIONAL: store status in Firestore
+      await admin.firestore()
+        .collection("contacts")
+        .doc(docId)
+        .update({
+          emailStatus: "sent",
+          sentAt: admin.firestore.FieldValue.serverTimestamp()
+        });
 
-      console.log("✅ Resend success:", result);
+      return null;
 
-      res.status(200).json({ success: true });
-    } catch (error) {
-      console.error("❌ Email send failed:", error);
-      res.status(500).json({ error: "Email failed" });
+    } catch (err) {
+      console.error("❌ EMAIL FAILED");
+      console.error(err);
+
+      await admin.firestore()
+        .collection("contacts")
+        .doc(docId)
+        .update({
+          emailStatus: "failed",
+          error: String(err)
+        });
+
+      return null;
     }
-  }
-);
+  });
