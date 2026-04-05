@@ -1,0 +1,248 @@
+.blogpost-page {
+  background: transparent;
+  min-height: 100vh;
+  padding: 40px 20px 80px;
+}
+
+.blogpost-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+/* Back button */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #d4c5a9;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-bottom: 36px;
+  transition: background 0.2s, transform 0.2s, border-color 0.2s;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(212, 168, 67, 0.4);
+  transform: translateX(-3px);
+}
+
+/* Hero */
+.post-hero {
+  margin-bottom: 32px;
+}
+
+.post-category {
+  display: inline-block;
+  background: #d4a843;
+  color: #1a1200;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+.post-title {
+  font-size: clamp(1.6rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: #f0ece4;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0 0 24px;
+}
+
+.post-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.post-author-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #d4a843;
+  color: #1a1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.post-author-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #f0ece4;
+  margin: 0 0 2px;
+}
+
+.post-meta-sub {
+  font-size: 0.78rem;
+  color: #7a6f62;
+  margin: 0;
+}
+
+/* Cover image */
+.post-cover-wrap {
+  width: 100%;
+  height: 380px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+}
+
+.post-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Body */
+.post-body {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 40px 44px;
+  margin-bottom: 40px;
+}
+
+.post-lead {
+  font-size: 1.1rem;
+  color: #c4b49a;
+  line-height: 1.75;
+  font-style: italic;
+  margin: 0 0 28px;
+}
+
+.post-divider {
+  height: 2px;
+  background: linear-gradient(90deg, #d4a843 0%, transparent 100%);
+  border-radius: 2px;
+  margin-bottom: 32px;
+  width: 60px;
+}
+
+.post-heading {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #f0ece4;
+  margin: 36px 0 14px;
+  letter-spacing: -0.01em;
+}
+
+.post-paragraph {
+  font-size: 1rem;
+  color: #a89880;
+  line-height: 1.8;
+  margin: 0 0 18px;
+}
+
+.post-list {
+  padding-left: 22px;
+  margin: 0 0 18px;
+}
+
+.post-list li {
+  font-size: 1rem;
+  color: #a89880;
+  line-height: 1.8;
+  margin-bottom: 6px;
+}
+
+/* Footer */
+.post-footer {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.back-btn-bottom {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #d4c5a9;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, border-color 0.2s;
+}
+
+.back-btn-bottom:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(212, 168, 67, 0.4);
+  transform: translateX(-3px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .blogpost-page {
+    padding: 30px 16px 60px;
+  }
+
+  .post-body {
+    padding: 28px 24px;
+  }
+
+  .post-cover-wrap {
+    height: 260px;
+    margin-bottom: 28px;
+  }
+
+  .post-hero {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .blogpost-page {
+    padding: 24px 14px 50px;
+  }
+
+  .post-body {
+    padding: 22px 18px;
+  }
+
+  .post-cover-wrap {
+    height: 200px;
+    border-radius: 12px;
+  }
+
+  .post-heading {
+    font-size: 1.15rem;
+    margin: 28px 0 10px;
+  }
+
+  .post-paragraph,
+  .post-list li {
+    font-size: 0.95rem;
+  }
+
+  .post-lead {
+    font-size: 1rem;
+  }
+
+  .back-btn,
+  .back-btn-bottom {
+    font-size: 0.8rem;
+    padding: 7px 14px;
+  }
+}
