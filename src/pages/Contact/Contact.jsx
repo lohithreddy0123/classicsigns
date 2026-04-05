@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import "./contact.css";
 
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
@@ -55,9 +56,16 @@ const Contact = () => {
 
   return (
     <section className="contact-page">
+      <Helmet>
+        <title>Contact Porcelain Sign Experts | Get a Custom Quote</title>
+        <meta
+          name="description"
+          content="Contact Classic Porcelain Signs for custom porcelain signage, enamel signs, and large-format displays. Get a free quote and expert guidance for your project."
+        />
+      </Helmet>
+
       <div className="contact-container">
 
-        {/* FORM */}
         <div className="contact-form">
           <h1>Contact Porcelain Sign Experts</h1>
 
@@ -114,7 +122,6 @@ const Contact = () => {
           </form>
         </div>
 
-        {/* INFO */}
         <div className="contact-info">
           <h2>What Happens Next?</h2>
 
