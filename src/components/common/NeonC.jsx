@@ -7,7 +7,7 @@ const NeonC = () => {
       <div className="neonC-container">
         <img
           src={neonh}
-          alt="Neon signs collage"
+          alt="custom neon and signage display"
           className="neonC-image"
         />
       </div>

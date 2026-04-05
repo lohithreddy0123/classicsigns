@@ -8,7 +8,7 @@ const SeventyTwo = () => {
 
         {/* Image */}
         <div className="seventyTwo-imageBox">
-          <img src={seventyTwoImg} alt="72 inch porcelain sign" />
+          <img src={seventyTwoImg} alt="72 inch custom porcelain sign" />
         </div>
 
         {/* Content */}
@@ -20,18 +20,18 @@ const SeventyTwo = () => {
           </h2>
 
           <p className="lead">
-            A format few can manufacture. Even fewer can perfect.
+            A format few can produce. Even fewer can perfect.
           </p>
 
           <p>
-            Our <strong>72-inch porcelain signs</strong> represent the highest
+            Our <strong>72-inch custom porcelain signs</strong> represent the highest
             level of craftsmanship we offer. Produced using traditional
-            porcelain enameling techniques, each sign is engineered for
-            permanence, depth, and unmistakable presence.
+            porcelain enameling techniques, each sign is built for durability,
+            depth, and strong visual presence.
           </p>
 
           <p>
-            This size is one of our defining USPs — rare, bold, and built for
+            This size is one of our defining strengths — rare, bold, and made for
             collectors, brands, and spaces that demand distinction.
           </p>
 

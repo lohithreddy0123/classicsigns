@@ -2,64 +2,65 @@ import React, { useState } from 'react';
 import './faq.css';
 
 const FAQ = () => {
-  // State to manage which FAQ item is open
   const [openIndex, setOpenIndex] = useState(null);
 
-  // FAQ items data
   const faqs = [
     {
       question: "What are classic porcelain signs?",
-      answer: "Classic porcelain signs are durable, enamel-coated metal signs originally used for advertising in the early to mid-1900s. Known for their glossy finish and vibrant colors, they’ve become collector favorites and statement décor pieces today by porcelain enamel sign collectors and enthusiasts."
+      answer: "Classic porcelain signs are durable, enamel-coated metal signs originally used for advertising in the early to mid-1900s. Known for their glossy finish and vibrant colors, they are now popular with collectors and used as statement décor pieces."
     },
-
     {
       question: "What makes porcelain signs valuable?",
-      answer: "Porcelain signs hold value due to their historical significance, brand rarity, and condition. Signs from popular brands like Coca-Cola, Texaco, or Shell are often sought after by collectors for their nostalgic and investment value."
+      answer: "Porcelain signs hold value due to their historical significance, brand rarity, and condition. Signs from well-known brands are often sought after by collectors for their nostalgic and long-term value."
     },
     {
       question: "How are porcelain signs made?",
-      answer: "Traditional porcelain signs are crafted by fusing powdered glass onto steel sheets at high temperatures. This process creates a glossy, weather-resistant surface that maintains its color and design for decades."
+      answer: "Porcelain signs are created by fusing powdered glass onto steel at high temperatures. This process produces a glossy, weather-resistant surface that keeps its color and finish for decades."
     },
     {
-      question: "Do you make custom enamel or porcelain signs?",
-      answer: "Yes, we specialize in custom porcelain signs for homes, businesses, and collectors. From retro gas station logos to personalized garage plaques, we can create designs that reflect your style or brand identity."
+      question: "Do you make custom porcelain signs?",
+      answer: "Yes, we specialize in custom porcelain signs for businesses, collectors, and personal projects. We create designs tailored to your style, branding, and requirements."
     },
-
-
     {
-      question: "Do we ship internationally?",
-      answer: "Yes, we offer worldwide shipping with protective packaging to ensure your sign arrives in perfect condition. Delivery times vary based on location and size of the sign."
+      question: "Do you ship internationally?",
+      answer: "Yes, we offer worldwide delivery with protective packaging to ensure your sign arrives safely. Delivery times depend on location and order size."
     },
     {
       question: "Can I restore or repair my old porcelain sign?",
-      answer: "We offer porcelain sign restoration services for damaged or faded signs. Our restoration experts match original colors and finishes to bring your vintage signage back to life while maintaining authenticity."
+      answer: "We provide restoration services for damaged or aged porcelain signs. Our process focuses on matching original colors and finishes while preserving authenticity."
     },
     {
       question: "What payment methods do you accept?",
-      answer: "We accept major cards, PayPal, and secure online bank transfers. All transactions are encrypted to protect your data."
+      answer: "We accept major cards, PayPal, and secure bank transfers. All transactions are encrypted to ensure safe payments."
     },
-
     {
-      question: "Can you bulk order porcelain signs for your business or project?",
-      answer: "Absolutely. We handle bulk and wholesale orders. Contact us for custom quotes and bulk pricing."
+      question: "Do you offer bulk orders for businesses?",
+      answer: "Yes, we handle bulk and wholesale orders for businesses and projects. Contact us to receive custom pricing and details."
     }
   ];
 
-  // Function to toggle the FAQ item
   const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index); // Open/close FAQ based on current state
+    setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
     <div id="faq-section">
       <h2>Frequently Asked Questions</h2>
+
       {faqs.map((faq, index) => (
-        <div key={index} className={`faq-item ${openIndex === index ? 'active' : ''}`} onClick={() => toggleFAQ(index)}>
+        <div
+          key={index}
+          className={`faq-item ${openIndex === index ? 'active' : ''}`}
+          onClick={() => toggleFAQ(index)}
+        >
           <div className="faq-question">
             {faq.question}
             <span className="arrow">{openIndex === index ? '▲' : '▼'}</span>
           </div>
-          {openIndex === index && <div className="faq-answer">{faq.answer}</div>}
+
+          {openIndex === index && (
+            <div className="faq-answer">{faq.answer}</div>
+          )}
         </div>
       ))}
     </div>

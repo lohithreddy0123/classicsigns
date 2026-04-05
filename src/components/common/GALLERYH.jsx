@@ -27,6 +27,25 @@ const images = [
   round, neon, logos,
 ];
 
+const altTexts = [
+  "custom porcelain sign",
+  "vintage enamel sign",
+  "72 inch porcelain sign",
+  "round porcelain sign",
+  "collector porcelain sign",
+  "custom enamel sign",
+  "porcelain advertising sign",
+  "handcrafted porcelain sign",
+  "retro enamel sign",
+  "custom round porcelain sign",
+  "large porcelain sign",
+  "classic enamel signage",
+  "porcelain button sign",
+  "round sign collection",
+  "neon sign display",
+  "custom logo sign",
+];
+
 const GalleryH = () => {
   const scrollRef = useRef(null);
   const [paused, setPaused] = useState(false);
@@ -54,7 +73,7 @@ const GalleryH = () => {
       }
     };
 
-    interval = setInterval(autoScroll, 20); // smooth + light CPU
+    interval = setInterval(autoScroll, 20);
 
     const handleVisibility = () => {
       if (document.hidden) setPaused(true);
@@ -71,7 +90,7 @@ const GalleryH = () => {
 
   return (
     <section id="gallery-section">
-      <h2>Porcelain Signage</h2>
+      <h2>Featured Porcelain Sign Projects</h2>
 
       <div className="gallery-shell">
         <button className="arrow left" onClick={() => scroll("left")}>‹</button>
@@ -87,7 +106,7 @@ const GalleryH = () => {
               <div className="gallery-card" key={i}>
                 <img
                   src={img}
-                  alt="Porcelain sign"
+                  alt={altTexts[i] || "custom porcelain sign"}
                   loading="lazy"
                   decoding="async"
                 />

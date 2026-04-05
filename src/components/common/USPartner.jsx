@@ -5,19 +5,18 @@ const USPartner = () => {
   return (
     <section className="us-partner-section">
       <div className="us-partner-container">
-        <h2 className="us-partner-title">Meet Our U.S. Partner</h2>
+        <h2 className="us-partner-title">Our U.S. Partner</h2>
 
         <img
           src={uspartner}
-          alt="Chris Harris"
+          alt="US porcelain sign partner"
           className="us-partner-image"
         />
 
         <h3 className="us-partner-name">TY HUFFER</h3>
 
         <p className="us-partner-desc">
-          A trusted part of our porcelain signs brand, closely connected with our
-          clients and our long-standing commitment to craftsmanship and quality.
+          Our U.S. partner helps us stay closely connected with customers while maintaining our commitment to craftsmanship, quality, and reliable service.
         </p>
 
         <div className="us-partner-contact">

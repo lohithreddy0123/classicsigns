@@ -87,7 +87,7 @@ const HERO = () => {
             <div className="hero-shadow" />
 
             <div className="hero-content">
-              <h1>{slide.title}</h1>
+              {index === 0 ? <h1>{slide.title}</h1> : <h2>{slide.title}</h2>}
               <p>{slide.subtitle}</p>
 
               {/* CTA */}
@@ -95,7 +95,7 @@ const HERO = () => {
                 className="hero-btn"
                 onClick={handleQuoteClick}
               >
-                Get a Quote
+                Request a Free Quote
               </button>
             </div>
           </div>

@@ -9,7 +9,6 @@ const Contact = () => {
     name: "",
     email: "",
     phone: "",
-    website: "",
     message: ""
   });
 
@@ -29,19 +28,14 @@ const Contact = () => {
     setError("");
 
     try {
-      console.log("📤 Saving to Firestore:", form);
-
-      const docRef = await addDoc(collection(db, "contacts"), {
+      await addDoc(collection(db, "contacts"), {
         name: form.name,
         email: form.email,
         phone: form.phone,
-        website: form.website,
         message: form.message,
         createdAt: serverTimestamp(),
         status: "pending"
       });
-
-      console.log("✅ Saved to Firestore:", docRef.id);
 
       setSubmitted(true);
 
@@ -49,12 +43,10 @@ const Contact = () => {
         name: "",
         email: "",
         phone: "",
-        website: "",
         message: ""
       });
 
     } catch (err) {
-      console.error("❌ Firestore error:", err);
       setError("Failed to send message. Please try again.");
     }
 
@@ -67,7 +59,7 @@ const Contact = () => {
 
         {/* FORM */}
         <div className="contact-form">
-          <h1>Contact Us</h1>
+          <h1>Contact Porcelain Sign Experts</h1>
 
           <form onSubmit={handleSubmit}>
             <input
@@ -96,17 +88,9 @@ const Contact = () => {
               onChange={handleChange}
             />
 
-            <input
-              type="text"
-              name="website"
-              placeholder="Website URL"
-              value={form.website}
-              onChange={handleChange}
-            />
-
             <textarea
               name="message"
-              placeholder="Tell us about your project"
+              placeholder="Tell us about your custom porcelain sign project"
               value={form.message}
               onChange={handleChange}
               required
@@ -116,14 +100,12 @@ const Contact = () => {
               {loading ? "Sending..." : "Send Message"}
             </button>
 
-            {/* SUCCESS MESSAGE */}
             {submitted && (
               <p className="success-msg">
-                ✅ Message received successfully. Email notification sent to our team.
+                ✅ Message received successfully. Our team will get back to you soon.
               </p>
             )}
 
-            {/* ERROR MESSAGE */}
             {error && (
               <p className="error-msg">
                 ❌ {error}
@@ -140,13 +122,13 @@ const Contact = () => {
           <p>We review your enquiry and project requirements.</p>
 
           <h3>Factory Response</h3>
-          <p>Our team replies with details on options and availability.</p>
+          <p>Our team responds with available options and details.</p>
 
           <h3>Design & Production</h3>
-          <p>We confirm details and begin creating your sign.</p>
+          <p>We confirm specifications and begin crafting your sign.</p>
 
           <h3>Worldwide Delivery</h3>
-          <p>Your finished sign is packed and shipped globally.</p>
+          <p>Your finished sign is securely packed and shipped worldwide.</p>
         </div>
 
       </div>

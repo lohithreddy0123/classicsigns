@@ -5,7 +5,11 @@ import collageV1 from "../../assets/images/collagev1.png";
 const CommonV1 = () => {
   return (
     <div className="common-v1">
-      <img src={collageV1} alt="Collage V1" className="common-image" />
+      <img
+        src={collageV1}
+        alt="custom porcelain signs collage"
+        className="common-image"
+      />
     </div>
   );
 };

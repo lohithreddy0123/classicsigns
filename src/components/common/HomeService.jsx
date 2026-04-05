@@ -9,33 +9,33 @@ const services = [
     img: roundsigns,
     title: "Custom Round Porcelain Signs",
     desc:
-      "Handcrafted round porcelain signs designed for durability, clarity, and timeless appeal."
+      "Handcrafted round porcelain signs made for durability, strong visibility, and timeless character."
   },
   {
     img: hor1,
     title: "Die-Cut & Specialty Signs",
     desc:
-      "Custom die-cut and specialty porcelain signage in a wide range of shapes and formats."
+      "Custom die-cut porcelain signage produced in unique shapes, styles, and formats for collectors and businesses."
   },
   {
     img: hor11,
     title: "Premium Neon Signs",
     desc:
-      "Large-format neon and rotating signs built to create strong visual impact."
+      "Large-format neon and specialty display signs created to deliver strong visual presence and lasting impact."
   }
 ];
 
 const HomeService = () => {
   return (
     <section className="home-services">
-      <h2 className="services-title">Our Services</h2>
+      <h2 className="services-title">Our Custom Sign Services</h2>
 
       <div className="services-grid">
         {services.map((service, index) => (
           <div className="service-card" key={index}>
             <img
               src={service.img}
-              alt={service.title}
+              alt={service.title.toLowerCase()}
               className="service-image"
             />
 

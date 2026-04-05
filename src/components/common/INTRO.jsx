@@ -6,22 +6,22 @@ const Intro = () => {
   return (
     <div id="introduction-section">
       <div className="introduction-text">
-        <h1 className="main-headline">
+        <h2 className="main-headline">
           Classic Porcelain Enamel Signs
-        </h1>
-        <p>
-          At Classic Porcelain Signs, we craft premium handcrafted porcelain enamel signs that blend vintage charm with lasting durability.
-        </p>
-        <p>
-          Each custom enamel sign is weatherproof, fade-resistant, and made to stand out—perfect for adding timeless character to homes, businesses, and collector spaces.
-        </p>
-        <p>
-          From retro porcelain buttons to oversized 72-inch round enamel signs, our creations are designed to make a bold statement and leave a lasting impression.
-        </p>
+        </h2>
+<p>
+  At Classic Porcelain Signs, we create custom porcelain signs and handcrafted enamel signage designed for durability, visual impact, and timeless appeal.
+</p>
+<p>
+  From vintage porcelain signs to large 72-inch round displays, each piece is made using traditional techniques and premium materials to ensure long-lasting quality.
+</p>
+<p>
+  We work with collectors, businesses, and brands worldwide to produce custom signage that stands out and lasts for generations.
+</p>
       </div>
 
       <div className="introduction-animation">
-        <img src={roundImage} alt="Round Porcelain Sign" />
+        <img src={roundImage} alt="custom round porcelain sign" />
       </div>
     </div>
   );

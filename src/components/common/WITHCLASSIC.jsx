@@ -6,25 +6,24 @@ const WITHCLASSIC = () => {
     <section className="withclassic-section">
       <div className="withclassic-questions">
         <span className="withclassic-pill">
-          Looking for custom porcelain signs, round signs, or die cut signs?
+          Looking for custom porcelain signs or round signage for your space?
         </span>
         <span className="withclassic-pill">
-          Want vintage enamel designs, press signs, or classic spinners?
+          Want vintage enamel designs or classic custom sign styles?
         </span>
         <span className="withclassic-pill">
-          Need a 72-inch round masterpiece or flanges 72 display?
+          Need a 72-inch porcelain sign or large-format display piece?
         </span>
         <span className="withclassic-pill">
-          Searching for premium round signs, buttons, or flanges?
+          Searching for premium enamel signs for business or collection?
         </span>
         <span className="withclassic-pill">
-          Interested in bold die cut signs, glass globe designs, or neon skins?
+          Interested in bold custom signage with strong visual impact?
         </span>
-
       </div>
 
       <div className="withclassic-tagline">
-        With Classic Porcelain Signs, timeless craftsmanship and enduring quality come standard.
+        With Classic Porcelain Signs, custom craftsmanship and long-lasting quality come standard.
       </div>
     </section>
   );

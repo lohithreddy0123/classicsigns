@@ -7,7 +7,7 @@ const CollectC = () => {
       <div className="collectC-container">
         <img
           src={collectImage}
-          alt="Collective signage showcase"
+          alt="custom porcelain signs showcase"
           className="collectC-image"
         />
       </div>

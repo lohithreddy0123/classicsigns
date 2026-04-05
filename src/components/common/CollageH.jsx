@@ -5,7 +5,11 @@ import collageH from "../../assets/images/collageh.png";
 const CollageH = () => {
   return (
     <div className="collage-h">
-      <img src={collageH} alt="Collage H" className="common-image" />
+      <img
+        src={collageH}
+        alt="custom porcelain signs collage"
+        className="common-image"
+      />
     </div>
   );
 };

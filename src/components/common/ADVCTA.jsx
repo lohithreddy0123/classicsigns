@@ -9,8 +9,7 @@ const AdvCTA = () => {
       <div className="free-header">
         <h2>Get Your Custom Porcelain Sign</h2>
         <p>
-          Discuss your custom porcelain sign with our experts at no cost to you.
-          Get your quote for free and start crafting your unique enamel or porcelain sign today.
+          Discuss your custom porcelain sign project with our team and get a free quote. From vintage enamel styles to large-format statement signs, we create custom pieces built to last.
         </p>
       </div>
 
@@ -61,9 +60,10 @@ const AdvCTA = () => {
           </div>
         </div>
       </div>
+
       {/* CTA Button */}
       <Link to="/contact" className="cta-button">
-        Request Your Free Custom Sign
+        Request a Free Quote
       </Link>
     </section>
   );

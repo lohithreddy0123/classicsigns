@@ -17,13 +17,10 @@ const Head2 = () => {
         <div className="head2-text">
           <span className="head2-logo">CLASSIC PORCELAIN SIGNS</span>
 
-          <h4>Premium Porcelain & Enamel Signage</h4>
+          <h2>Premium Porcelain & Enamel Signage</h2>
 
           <p>
-            At Classic Porcelain Signs, we craft handmade porcelain enamel signs
-            that blend vintage charm with lasting durability. From custom buttons
-            to oversized 72-inch round signage, each piece is designed to make a
-            statement and stand the test of time.
+            Classic Porcelain Signs creates high-quality porcelain enamel signage with a focus on durability, design, and authentic craftsmanship. From custom buttons to oversized 72-inch round signs, each piece is made to stand out and last for years.
           </p>
 
           <a href="/contact">Get Your Free Quote →</a>

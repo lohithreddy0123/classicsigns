@@ -18,6 +18,20 @@ const porcelainImages = [
   hor1, hor2, hor5, hor6, hor7, hor8, hor9, ver1, ver4, ver12, ver15
 ];
 
+const altTexts = [
+  "custom porcelain sign",
+  "vintage enamel sign",
+  "round porcelain sign",
+  "72 inch porcelain sign",
+  "collector porcelain sign",
+  "custom enamel sign",
+  "porcelain advertising sign",
+  "handcrafted porcelain sign",
+  "retro enamel signage",
+  "custom round porcelain sign",
+  "large porcelain display sign"
+];
+
 const GalleryPorcelain = () => {
   const [lightbox, setLightbox] = useState(false);
   const [currentImg, setCurrentImg] = useState(null);
@@ -34,7 +48,8 @@ const GalleryPorcelain = () => {
 
   return (
     <section className="gallery-porcelain">
-      <h2 className="gallery-title">Timeless Porcelain</h2>
+      <h2 className="gallery-title">Featured Porcelain Sign Projects</h2>
+
       <div className="porcelain-grid">
         {porcelainImages.map((img, index) => (
           <div
@@ -42,14 +57,24 @@ const GalleryPorcelain = () => {
             key={index}
             onClick={() => openLightbox(img)}
           >
-            <img src={img} alt={`Porcelain ${index}`} className="porcelain-image" />
+            <img
+              src={img}
+              alt={altTexts[index] || "custom porcelain sign"}
+              className="porcelain-image"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         ))}
       </div>
 
       {lightbox && (
         <div className="lightbox" onClick={closeLightbox}>
-          <img src={currentImg} alt="Preview" className="lightbox-img" />
+          <img
+            src={currentImg}
+            alt="porcelain sign preview"
+            className="lightbox-img"
+          />
           <span className="lightbox-close">&times;</span>
         </div>
       )}

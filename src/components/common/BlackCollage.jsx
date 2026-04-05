@@ -7,7 +7,7 @@ const BlackCollage = () => {
       <div className="blackCollage-container">
         <img
           src={blackcollage}
-          alt="Porcelain signage collage"
+          alt="custom porcelain signs collage"
           className="blackCollage-image"
         />
       </div>

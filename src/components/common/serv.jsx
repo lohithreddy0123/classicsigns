@@ -15,7 +15,7 @@ const Serv = () => {
 
   return (
     <section id="services-overview">
-      <h2>Our Porcelain Sign Services</h2>
+      <h2>Our Custom Porcelain Sign Services</h2>
 
       <div className="services-container">
         <div className="services-list">
@@ -32,7 +32,7 @@ const Serv = () => {
             <h3>Custom Porcelain Signs</h3>
             <p>✔ Hand-crafted, kiln-fired porcelain</p>
             <p>✔ Fully custom text, colors & layouts</p>
-            <p>✔ Designed for durability and elegance</p>
+            <p>✔ Designed for durability and long-term use</p>
           </div>
 
           {/* Service 2 */}
@@ -40,7 +40,7 @@ const Serv = () => {
             <h3>House & Address Signs</h3>
             <p>✔ High-contrast house numbers</p>
             <p>✔ Weather-resistant enamel finish</p>
-            <p>✔ Classic, timeless appearance</p>
+            <p>✔ Classic, long-lasting appearance</p>
           </div>
 
           {/* Second Video */}
@@ -55,30 +55,30 @@ const Serv = () => {
             <h3>Business Signage</h3>
             <p>✔ Professional storefront branding</p>
             <p>✔ Custom logos and typography</p>
-            <p>✔ Built for long-term outdoor use</p>
+            <p>✔ Built for durable outdoor use</p>
           </div>
 
           {/* Service 4 */}
           <div className="service-item">
             <h3>Vintage & Enamel Style</h3>
-            <p>✔ Traditional enamel aesthetics</p>
-            <p>✔ Perfect for cafés & studios</p>
+            <p>✔ Traditional enamel design aesthetics</p>
+            <p>✔ Ideal for cafés, studios, and brands</p>
             <p>✔ Authentic retro craftsmanship</p>
           </div>
 
           {/* Service 5 */}
           <div className="service-item">
             <h3>Outdoor Durability</h3>
-            <p>✔ UV & fade resistant colors</p>
-            <p>✔ Resistant to rain and frost</p>
-            <p>✔ Long lifespan with minimal care</p>
+            <p>✔ UV and fade resistant colors</p>
+            <p>✔ Resistant to rain and harsh weather</p>
+            <p>✔ Long lifespan with minimal maintenance</p>
           </div>
 
           {/* Service 6 */}
           <div className="service-item">
             <h3>Made to Order</h3>
             <p>✔ Each sign crafted individually</p>
-            <p>✔ Attention to fine details</p>
+            <p>✔ Attention to detail and finish</p>
             <p>✔ No mass production</p>
           </div>
 

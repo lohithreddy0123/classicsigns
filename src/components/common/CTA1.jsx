@@ -7,11 +7,11 @@ import ver15 from "../../assets/images/ver15.png";
 const CTA1 = () => {
   return (
     <section className="cta1-section">
-      {/* IMAGE (replaces video) */}
+      {/* IMAGE */}
       <div className="cta1-media">
         <img
           src={ver15}
-          alt="Custom Porcelain Sign Visual"
+          alt="custom porcelain sign design"
           loading="lazy"
           decoding="async"
         />
@@ -21,12 +21,11 @@ const CTA1 = () => {
       <div className="cta1-content">
         <h2>Get Your Custom Porcelain Sign</h2>
         <p>
-          At Classic Porcelain Signs, we craft handcrafted enamel signs — from vintage buttons
-          to 72-inch round signage — designed to make a statement and last a lifetime.
+          At Classic Porcelain Signs, we create custom porcelain signs and enamel signage — from vintage buttons to 72-inch round designs — built to stand out and last for years.
         </p>
 
         <Link to="/contact" className="cta1-button">
-          Request Your Free Quote
+          Request a Free Quote
         </Link>
       </div>
     </section>
