@@ -1,37 +1,53 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+/* Better: load font in <head> instead of @import for less CLS
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+*/
 
 /* Header Container */
 .site-header {
   width: 100%;
   background: #0a0a0a;
   padding: 0 2rem;
+  position: sticky;
   top: 0;
   z-index: 1000;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
   font-family: 'Poppins', sans-serif;
+  min-height: 80px; /* reserve space */
 }
 
+/* Inner wrapper */
 .header-container {
   max-width: 1300px;
   margin: 0 auto;
-  height: 80px;
+  height: 80px; /* fixed stable height */
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* Logo */
-.logo img {
+/* Logo wrapper reserves exact space */
+.logo {
+  display: flex;
+  align-items: center;
   width: 270px;
-  height: auto;
+  height: 60px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   display: block;
-  transition: transform 0.3s, box-shadow 0.3s;
-  margin-left: -30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-left: 0;
 }
 
 .logo img:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
   box-shadow: 0 0 15px #1E90FFaa;
 }
 
@@ -47,9 +63,11 @@
   text-decoration: none;
   font-weight: 600;
   font-size: 16px;
+  line-height: 1; /* stable text box */
   padding: 8px 12px;
   border-radius: 5px;
-  transition: all 0.3s;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  white-space: nowrap;
 }
 
 .nav a:hover {
@@ -63,6 +81,7 @@
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 .hamburger span {
@@ -70,7 +89,7 @@
   width: 28px;
   background: #d1d1d1;
   border-radius: 2px;
-  transition: all 0.3s;
+  transition: transform 0.3s ease, opacity 0.3s ease, background 0.3s ease;
 }
 
 .hamburger.active span:nth-child(1) {
@@ -111,13 +130,16 @@
   height: 90px;
   display: flex;
   align-items: center;
-  justify-content: left;
-  margin-left: 15px;
+  justify-content: flex-start;
+  padding-left: 15px;
   border-bottom: 1px solid #222;
+  flex-shrink: 0;
 }
 
 .sidebar-logo img {
   width: 180px;
+  height: auto;
+  display: block;
 }
 
 /* Sidebar Nav */
@@ -138,7 +160,7 @@
   padding: 14px 18px;
   border-radius: 10px;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
   position: relative;
 }
 
@@ -149,7 +171,7 @@
   background: #1E90FF20;
   opacity: 0;
   border-radius: 10px;
-  transition: 0.3s;
+  transition: opacity 0.3s ease;
 }
 
 .sidebar-nav a:hover::before {
@@ -173,7 +195,7 @@
   background: rgba(0, 0, 0, 0.6);
   opacity: 0;
   visibility: hidden;
-  transition: 0.3s;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
   z-index: 1400;
 }
 
@@ -182,8 +204,22 @@
   visibility: visible;
 }
 
-/* ================= RESPONSIVE ================= */
+/* Mobile */
 @media (max-width: 768px) {
+  .site-header {
+    padding: 0 1rem;
+    min-height: 72px;
+  }
+
+  .header-container {
+    height: 72px;
+  }
+
+  .logo {
+    width: 190px;
+    height: 48px;
+  }
+
   .nav {
     display: none;
   }
@@ -193,38 +229,33 @@
   }
 }
 
-/* ================= DESKTOP LOGO ELEVATED ================= */
+/* Desktop */
 @media (min-width: 769px) {
   .site-header {
-    overflow: visible;
+    min-height: 100px;
   }
 
   .header-container {
     height: 100px;
-    overflow: visible;
   }
 
   .logo {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    overflow: visible;
+    width: 320px;
+    height: 72px; /* keep inside header */
+    overflow: hidden;
   }
 
   .logo img {
-    width: auto;
-    height: 150px;
-    max-width: 440px;
-    margin-left: -10px;
-    position: relative;
-    z-index: 10;
+    width: 100%;
+    height: 100%;
+    max-width: none;
     filter: drop-shadow(0 6px 24px rgba(0, 0, 0, 0.8))
             drop-shadow(0 2px 6px rgba(0, 0, 0, 0.9));
     transition: transform 0.35s ease, filter 0.35s ease;
   }
 
   .logo img:hover {
-    transform: scale(1.04) translateY(-3px);
+    transform: scale(1.03);
     filter: drop-shadow(0 8px 28px rgba(30, 144, 255, 0.45))
             drop-shadow(0 2px 8px rgba(0, 0, 0, 0.9));
   }
