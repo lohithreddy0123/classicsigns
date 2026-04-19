@@ -1,30 +1,26 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./HERO.css";
-
-import hor1 from "../../assets/images/hor1.png";
-import hor5 from "../../assets/images/hor5.png";
-import hor2 from "../../assets/images/hor2.png";
-import hor3 from "../../assets/images/hor8.jpg";
+import { images } from "../../assets/imageUrls";
 
 const slides = [
   {
-    image: hor1,
+    image: images.hor1,
     title: "72-Inch Round Porcelain Signs",
     subtitle: "Custom enamel buttons & round signage for collectors."
   },
   {
-    image: hor5,
+    image: images.hor5,
     title: "Vintage Round Neon Signs",
     subtitle: "Make a statement with retro neon & porcelain."
   },
   {
-    image: hor2,
+    image: images.hor2,
     title: "Heritage Button Signage",
     subtitle: "Classic designs built to last decades."
   },
   {
-    image: hor3,
+    image: images.hor8,
     title: "Custom Collector Pieces",
     subtitle: "From enamel buttons to large round signs."
   }
@@ -34,13 +30,11 @@ const HERO = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const touchStartX = useRef(null);
   const touchEndX = useRef(null);
-  const navigate = useNavigate();
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % slides.length);
     }, 5000);
-
     return () => clearInterval(interval);
   }, []);
 
@@ -51,19 +45,13 @@ const HERO = () => {
   const handleTouchEnd = (e) => {
     touchEndX.current = e.changedTouches[0].screenX;
     const distance = touchStartX.current - touchEndX.current;
-
     if (distance > 50) {
       setCurrentIndex((prev) => (prev + 1) % slides.length);
     } else if (distance < -50) {
       setCurrentIndex((prev) => (prev - 1 + slides.length) % slides.length);
     }
-
     touchStartX.current = null;
     touchEndX.current = null;
-  };
-
-  const handleQuoteClick = () => {
-    navigate("/contact");
   };
 
   return (
@@ -82,26 +70,20 @@ const HERO = () => {
               src={slide.image}
               alt={slide.title}
               className="hero-image"
+              fetchpriority={index === 0 ? "high" : undefined}
+              loading={index === 0 ? undefined : "lazy"}
             />
-
             <div className="hero-shadow" />
-
             <div className="hero-content">
               {index === 0 ? <h1>{slide.title}</h1> : <h2>{slide.title}</h2>}
               <p>{slide.subtitle}</p>
-
-              {/* CTA */}
-              <button
-                className="hero-btn"
-                onClick={handleQuoteClick}
-              >
+              <Link to="/contact" className="hero-btn">
                 Request a Free Quote
-              </button>
+              </Link>
             </div>
           </div>
         </div>
       ))}
-
       {/* Dots */}
       <div className="hero-dots">
         {slides.map((_, idx) => (

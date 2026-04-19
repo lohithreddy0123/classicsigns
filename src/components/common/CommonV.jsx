@@ -1,11 +1,16 @@
 import React from "react";
 import "./CommonV.css";
-import collageV from "../../assets/images/collagev.png";
+import { images } from "../../assets/imageUrls";
 
 const CommonV = () => {
   return (
     <div className="common-v">
-      <img src={collageV} alt="Collage V" className="common-image" />
+      <img
+        src={images.collagev}
+        alt="Collage V"
+        className="common-image"
+        loading="lazy"
+      />
     </div>
   );
 };

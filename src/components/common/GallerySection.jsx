@@ -1,21 +1,10 @@
 import React, { useState } from "react";
 import "./GallerySection.css";
-
-// Import your porcelain images
-import hor1 from "../../assets/images/hor1.png";
-import hor2 from "../../assets/images/hor2.png";
-import hor5 from "../../assets/images/hor5.png";
-import hor6 from "../../assets/images/hor6.jpg";
-import hor7 from "../../assets/images/hor7.jpg";
-import hor8 from "../../assets/images/hor8.jpg";
-import hor9 from "../../assets/images/hor9.jpg";
-import ver1 from "../../assets/images/ver1.png";
-import ver4 from "../../assets/images/ver4.jpg";
-import ver12 from "../../assets/images/ver12.jpg";
-import ver15 from "../../assets/images/ver15.png";
+import { images } from "../../assets/imageUrls";
 
 const porcelainImages = [
-  hor1, hor2, hor5, hor6, hor7, hor8, hor9, ver1, ver4, ver12, ver15
+  images.hor1, images.hor2, images.hor5, images.hor6, images.hor7,
+  images.hor8, images.hor9, images.ver1, images.ver4, images.ver12, images.ver15
 ];
 
 const altTexts = [
@@ -49,7 +38,6 @@ const GalleryPorcelain = () => {
   return (
     <section className="gallery-porcelain">
       <h2 className="gallery-title">Featured Porcelain Sign Projects</h2>
-
       <div className="porcelain-grid">
         {porcelainImages.map((img, index) => (
           <div
@@ -67,7 +55,6 @@ const GalleryPorcelain = () => {
           </div>
         ))}
       </div>
-
       {lightbox && (
         <div className="lightbox" onClick={closeLightbox}>
           <img

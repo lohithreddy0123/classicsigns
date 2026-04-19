@@ -1,14 +1,15 @@
 import "./CollectC.css";
-import collectImage from "../../assets/images/collectimage.png";
+import { images } from "../../assets/imageUrls";
 
 const CollectC = () => {
   return (
     <section className="collectC">
       <div className="collectC-container">
         <img
-          src={collectImage}
+          src={images.collectimage}
           alt="custom porcelain signs showcase"
           className="collectC-image"
+          loading="lazy"
         />
       </div>
     </section>

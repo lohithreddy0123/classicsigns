@@ -1,20 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <url>
-    <loc>https://classicporcelainsigns.com/</loc>
+    <loc>https://www.classicporcelainsigns.com/</loc>
+    <priority>1.0</priority>
   </url>
-
   <url>
-    <loc>https://classicporcelainsigns.com/about</loc>
+    <loc>https://www.classicporcelainsigns.com/about</loc>
+    <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://classicporcelainsigns.com/services</loc>
+    <loc>https://www.classicporcelainsigns.com/services</loc>
+    <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://classicporcelainsigns.com/contact</loc>
+    <loc>https://www.classicporcelainsigns.com/contact</loc>
+    <priority>0.8</priority>
   </url>
-
+  <url>
+    <loc>https://www.classicporcelainsigns.com/blogs</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.classicporcelainsigns.com/blogs/round-porcelain-signs</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.classicporcelainsigns.com/blogs/premium-neon-signs</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.classicporcelainsigns.com/blogs/die-cut-porcelain-signage</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.classicporcelainsigns.com/blogs/us-partnership</loc>
+    <priority>0.7</priority>
+  </url>
 </urlset>

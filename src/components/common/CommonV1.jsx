@@ -1,14 +1,15 @@
 import React from "react";
 import "./CommonV1.css";
-import collageV1 from "../../assets/images/collagev1.png";
+import { images } from "../../assets/imageUrls";
 
 const CommonV1 = () => {
   return (
     <div className="common-v1">
       <img
-        src={collageV1}
+        src={images.collagev1}
         alt="custom porcelain signs collage"
         className="common-image"
+        loading="lazy"
       />
     </div>
   );

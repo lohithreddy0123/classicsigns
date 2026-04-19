@@ -1,8 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "./serv.css";
-
-import porcelainVideo1 from "../../assets/videos/porcelain-signs1.mp4";
-import porcelainVideo3 from "../../assets/videos/porcelain-signs3.mp4";
+import { videos } from "../../assets/imageUrls";
 
 const Serv = () => {
   const slowVideoRef = useRef(null);
@@ -16,17 +14,14 @@ const Serv = () => {
   return (
     <section id="services-overview">
       <h2>Our Custom Porcelain Sign Services</h2>
-
       <div className="services-container">
         <div className="services-list">
-
           {/* First Video */}
           <div className="services-video">
             <video ref={slowVideoRef} autoPlay muted loop playsInline>
-              <source src={porcelainVideo1} type="video/mp4" />
+              <source src={videos.signs1} type="video/mp4" />
             </video>
           </div>
-
           {/* Service 1 */}
           <div className="service-item">
             <h3>Custom Porcelain Signs</h3>
@@ -34,7 +29,6 @@ const Serv = () => {
             <p>✔ Fully custom text, colors & layouts</p>
             <p>✔ Designed for durability and long-term use</p>
           </div>
-
           {/* Service 2 */}
           <div className="service-item">
             <h3>House & Address Signs</h3>
@@ -42,14 +36,12 @@ const Serv = () => {
             <p>✔ Weather-resistant enamel finish</p>
             <p>✔ Classic, long-lasting appearance</p>
           </div>
-
           {/* Second Video */}
           <div className="services-video">
             <video ref={softVideoRef} autoPlay muted loop playsInline>
-              <source src={porcelainVideo3} type="video/mp4" />
+              <source src={videos.signs3} type="video/mp4" />
             </video>
           </div>
-
           {/* Service 3 */}
           <div className="service-item">
             <h3>Business Signage</h3>
@@ -57,7 +49,6 @@ const Serv = () => {
             <p>✔ Custom logos and typography</p>
             <p>✔ Built for durable outdoor use</p>
           </div>
-
           {/* Service 4 */}
           <div className="service-item">
             <h3>Vintage & Enamel Style</h3>
@@ -65,7 +56,6 @@ const Serv = () => {
             <p>✔ Ideal for cafés, studios, and brands</p>
             <p>✔ Authentic retro craftsmanship</p>
           </div>
-
           {/* Service 5 */}
           <div className="service-item">
             <h3>Outdoor Durability</h3>
@@ -73,7 +63,6 @@ const Serv = () => {
             <p>✔ Resistant to rain and harsh weather</p>
             <p>✔ Long lifespan with minimal maintenance</p>
           </div>
-
           {/* Service 6 */}
           <div className="service-item">
             <h3>Made to Order</h3>
@@ -81,7 +70,6 @@ const Serv = () => {
             <p>✔ Attention to detail and finish</p>
             <p>✔ No mass production</p>
           </div>
-
         </div>
       </div>
     </section>

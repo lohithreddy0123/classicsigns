@@ -1,13 +1,11 @@
-import img1 from "../../assets/images/round.png";
-import img2 from "../../assets/images/neonh.png";
-import img3 from "../../assets/images/collageh.png";
-import img4 from "../../assets/images/uspartner.jpg";
+import { images } from "../../assets/imageUrls";
 
 const blogsData = [
   {
     id: 1,
+    slug: "round-porcelain-signs",
     title: "The Art of 72-Inch Round Porcelain Signs",
-    image: img1,
+    image: images.round,
     description:
       "Discover the craftsmanship behind our large-format round porcelain signs. Built for collectors and businesses who demand bold, lasting visual impact.",
     date: "March 15, 2025",
@@ -36,8 +34,9 @@ Contact us today to discuss your custom round porcelain sign project and receive
   },
   {
     id: 2,
+    slug: "premium-neon-signs",
     title: "Premium Neon Signs: Bold, Bright, and Built to Last",
-    image: img2,
+    image: images.neonh,
     description:
       "Our premium neon signs deliver strong visual presence for businesses and collectors. Explore how we combine classic neon craft with modern durability.",
     date: "February 28, 2025",
@@ -66,8 +65,9 @@ Reach out to discuss your neon sign project and get a free quote from our team.`
   },
   {
     id: 3,
+    slug: "die-cut-porcelain-signage",
     title: "Custom Die-Cut & Specialty Porcelain Signage",
-    image: img3,
+    image: images.collageh,
     description:
       "Beyond the standard rectangle — our die-cut porcelain signs are crafted in unique shapes and formats for collectors, brands, and businesses worldwide.",
     date: "January 20, 2025",
@@ -96,8 +96,9 @@ Contact our team to get started with a free quote.`,
   },
   {
     id: 4,
+    slug: "us-partnership",
     title: "Our U.S. Partnership: Quality and Service Worldwide",
-    image: img4,
+    image: images.uspartner,
     description:
       "Meet Ty Huffer, our trusted U.S. partner who keeps Classic Porcelain Signs closely connected with North American customers and ensures reliable service.",
     date: "December 10, 2024",

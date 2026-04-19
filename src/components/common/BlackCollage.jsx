@@ -1,14 +1,15 @@
 import "./BlackCollage.css";
-import blackcollage from "../../assets/images/blackcollage.png";
+import { images } from "../../assets/imageUrls";
 
 const BlackCollage = () => {
   return (
     <section className="blackCollage">
       <div className="blackCollage-container">
         <img
-          src={blackcollage}
+          src={images.blackcollage}
           alt="custom porcelain signs collage"
           className="blackCollage-image"
+          loading="lazy"
         />
       </div>
     </section>

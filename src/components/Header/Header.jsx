@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './header.css';
-
 import {
   FaHome,
   FaInfoCircle,
   FaServicestack,
   FaEnvelope
 } from 'react-icons/fa';
-
-import logo from '../../assets/images/logoh.png';
+import { images } from '../../assets/imageUrls';
 
 const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -20,10 +18,9 @@ const Header = () => {
         {/* LOGO */}
         <div className="logo">
           <Link to="/">
-            <img src={logo} alt="Logo" />
+            <img src={images.logoh} alt="Classic Porcelain Signs Logo" />
           </Link>
         </div>
-
         {/* DESKTOP NAV */}
         <nav className="nav">
           <Link to="/"><FaHome /> Home</Link>
@@ -31,7 +28,6 @@ const Header = () => {
           <Link to="/services"><FaServicestack /> Services</Link>
           <Link to="/contact"><FaEnvelope /> Contact</Link>
         </nav>
-
         {/* HAMBURGER */}
         <div
           className={`hamburger ${isSidebarOpen ? 'active' : ''}`}
@@ -42,32 +38,26 @@ const Header = () => {
           <span></span>
         </div>
       </div>
-
       {/* SIDEBAR */}
       <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
         <div className="sidebar-logo">
-          <img src={logo} alt="Sidebar Logo" />
+          <img src={images.logoh} alt="Classic Porcelain Signs Logo" />
         </div>
-
         <nav className="sidebar-nav">
           <Link to="/" onClick={() => setIsSidebarOpen(false)}>
             <FaHome /> Home
           </Link>
-
           <Link to="/about" onClick={() => setIsSidebarOpen(false)}>
             <FaInfoCircle /> About
           </Link>
-
           <Link to="/services" onClick={() => setIsSidebarOpen(false)}>
             <FaServicestack /> Services
           </Link>
-
           <Link to="/contact" onClick={() => setIsSidebarOpen(false)}>
             <FaEnvelope /> Contact
           </Link>
         </nav>
       </div>
-
       {/* OVERLAY */}
       <div
         className={`overlay ${isSidebarOpen ? 'active' : ''}`}
