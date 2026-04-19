@@ -6,16 +6,24 @@ const USPartner = () => {
     <section className="us-partner-section">
       <div className="us-partner-container">
         <h2 className="us-partner-title">Our U.S. Partner</h2>
+
         <img
           src={images.uspartner}
           alt="US porcelain sign partner"
           className="us-partner-image"
+          width="320"
+          height="320"
           loading="lazy"
+          decoding="async"
         />
+
         <h3 className="us-partner-name">TY HUFFER</h3>
+
         <p className="us-partner-desc">
-          Our U.S. partner helps us stay closely connected with customers while maintaining our commitment to craftsmanship, quality, and reliable service.
+          Our U.S. partner helps us stay closely connected with customers while
+          maintaining our commitment to craftsmanship, quality, and reliable service.
         </p>
+
         <div className="us-partner-contact">
           <span>📞 +1 816 261 5697</span>
           <span>✉️ tyhuffer@gmail.com</span>

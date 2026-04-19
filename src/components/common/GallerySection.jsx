@@ -3,8 +3,17 @@ import "./GallerySection.css";
 import { images } from "../../assets/imageUrls";
 
 const porcelainImages = [
-  images.hor1, images.hor2, images.hor5, images.hor6, images.hor7,
-  images.hor8, images.hor9, images.ver1, images.ver4, images.ver12, images.ver15
+  images.hor1,
+  images.hor2,
+  images.hor5,
+  images.hor6,
+  images.hor7,
+  images.hor8,
+  images.hor9,
+  images.ver1,
+  images.ver4,
+  images.ver12,
+  images.ver15,
 ];
 
 const altTexts = [
@@ -18,7 +27,7 @@ const altTexts = [
   "handcrafted porcelain sign",
   "retro enamel signage",
   "custom round porcelain sign",
-  "large porcelain display sign"
+  "large porcelain display sign",
 ];
 
 const GalleryPorcelain = () => {
@@ -38,6 +47,7 @@ const GalleryPorcelain = () => {
   return (
     <section className="gallery-porcelain">
       <h2 className="gallery-title">Featured Porcelain Sign Projects</h2>
+
       <div className="porcelain-grid">
         {porcelainImages.map((img, index) => (
           <div
@@ -49,18 +59,24 @@ const GalleryPorcelain = () => {
               src={img}
               alt={altTexts[index] || "custom porcelain sign"}
               className="porcelain-image"
+              width="800"
+              height="1000"
               loading="lazy"
               decoding="async"
             />
           </div>
         ))}
       </div>
+
       {lightbox && (
         <div className="lightbox" onClick={closeLightbox}>
           <img
             src={currentImg}
             alt="porcelain sign preview"
             className="lightbox-img"
+            width="1200"
+            height="1500"
+            decoding="async"
           />
           <span className="lightbox-close">&times;</span>
         </div>

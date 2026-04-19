@@ -25,6 +25,7 @@
 .gallery-viewport {
   max-width: 1200px;
   overflow: hidden;
+  width: 100%;
 }
 
 /* Track */
@@ -34,7 +35,6 @@
   padding: 12px 10px;
   overflow-x: auto;
   scrollbar-width: none;
-  will-change: transform;
 }
 
 .gallery-track::-webkit-scrollbar {
@@ -44,6 +44,7 @@
 /* Cards */
 .gallery-card {
   flex: 0 0 260px;
+  width: 260px;
   height: 340px;
   border-radius: 20px;
   overflow: hidden;
@@ -55,6 +56,7 @@
 .gallery-card img {
   width: 100%;
   height: 100%;
+  display: block;
   object-fit: cover;
 }
 
@@ -74,6 +76,7 @@
   cursor: pointer;
   border-radius: 14px;
   transition: background 0.3s ease, transform 0.3s ease;
+  flex-shrink: 0;
 }
 
 .arrow:hover {
@@ -85,6 +88,7 @@
 @media (max-width: 480px) {
   .gallery-card {
     flex: 0 0 160px;
+    width: 160px;
     height: 220px;
   }
 
