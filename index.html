@@ -10,13 +10,26 @@
     content="Custom porcelain signs and enamel signage handcrafted for durability, timeless appeal, and worldwide delivery."
   />
   <meta name="google-site-verification" content="google834047a4d9030e86" />
+
   <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <!-- Preconnect Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- FIXED: Load all fonts actually used in CSS -->
   <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500;700&family=Playfair+Display:wght@500;600&display=swap"
     rel="stylesheet"
   />
+
+  <!-- LCP Image Preload (Hero) -->
+  <link
+    rel="preload"
+    as="image"
+    href="https://firebasestorage.googleapis.com/v0/b/classicporcelainsigns.firebasestorage.app/o/images%2Fhor1.png?alt=media"
+  />
+
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZCDHPBFBH"></script>
   <script>
@@ -25,8 +38,10 @@
     gtag('js', new Date());
     gtag('config', 'G-SZCDHPBFBH');
   </script>
+
   <title>Classic Porcelain Signs | Custom Enamel Signage</title>
 </head>
+
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
