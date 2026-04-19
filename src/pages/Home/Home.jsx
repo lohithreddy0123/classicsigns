@@ -15,10 +15,20 @@ const Home = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    window.prerenderReady = false;
+
     const handleResize = () => setIsMobile(window.innerWidth <= 640);
     handleResize();
     window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+
+    const timer = setTimeout(() => {
+      window.prerenderReady = true;
+    }, 1500);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      clearTimeout(timer);
+    };
   }, []);
 
   return (
@@ -48,6 +58,7 @@ const Home = () => {
           })}
         </script>
       </Helmet>
+
       <HERO />
       {!isMobile && (
         <Suspense fallback={null}>
