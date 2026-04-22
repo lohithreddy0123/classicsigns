@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
-import Header from "./components/Header/Header";
-// import Footer from "./components/Footer/Footer";
+// import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 import ScrollToTop from "./components/common/ScrollToTop";
 
 const Home     = lazy(() => import("./pages/Home/Home"));
@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <ScrollToTop />
-      <Header />
+      {/* <Header /> */}
       <main>
         <Suspense fallback={null}>
           <Routes>
@@ -28,7 +28,7 @@ function App() {
           </Routes>
         </Suspense>
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
