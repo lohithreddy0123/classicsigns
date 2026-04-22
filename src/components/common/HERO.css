@@ -5,6 +5,7 @@
   width: 100%;
   position: relative;
   overflow: hidden;
+  background: #000;
 }
 
 /* =========================
@@ -12,25 +13,31 @@
 ========================= */
 .hero-slide {
   display: block;
+  width: 100%;
 }
 
 /* =========================
    IMAGE WRAPPER
+   reserved height for CLS
 ========================= */
 .hero-image-wrapper {
   position: relative;
   width: 100%;
+  height: 500px;
   min-height: 500px;
+  overflow: hidden;
+  background: #000;
 }
 
 /* =========================
-   IMAGE — 100% VISIBLE
+   IMAGE — keep same UI
 ========================= */
 .hero-image {
   width: 100%;
-  height: 500px;
+  height: 100%;
   display: block;
   object-fit: cover;
+  object-position: center center;
 }
 
 /* =========================
@@ -39,6 +46,7 @@
 .hero-shadow {
   position: absolute;
   inset: 0;
+  z-index: 1;
   background: linear-gradient(
     to right,
     rgba(0, 0, 0, 0.8) 0%,
@@ -57,6 +65,7 @@
   position: absolute;
   left: 40px;
   bottom: 40px;
+  z-index: 2;
   max-width: 50%;
   color: #ffffff;
   display: flex;
@@ -123,6 +132,8 @@
 }
 
 .hero-dots .dot {
+  appearance: none;
+  -webkit-appearance: none;
   width: 9px;
   height: 9px;
   min-width: 9px;
@@ -131,6 +142,7 @@
   background: rgba(255, 255, 255, 0.35);
   border: none;
   padding: 0;
+  margin: 0;
   cursor: pointer;
 }
 
@@ -139,10 +151,27 @@
 }
 
 /* =========================
+   TABLET
+========================= */
+@media (max-width: 992px) {
+  .hero-image-wrapper {
+    height: 420px;
+    min-height: 420px;
+  }
+
+  .hero-content {
+    max-width: 65%;
+    left: 28px;
+    bottom: 28px;
+  }
+}
+
+/* =========================
    MOBILE ADJUSTMENTS
 ========================= */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .hero-image-wrapper {
+    height: 300px;
     min-height: 300px;
   }
 
@@ -165,9 +194,5 @@
   .hero-btn {
     padding: 10px 20px;
     font-size: 0.9rem;
-  }
-
-  .hero-image {
-    height: 300px;
   }
 }

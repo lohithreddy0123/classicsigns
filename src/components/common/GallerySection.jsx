@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./GallerySection.css";
 import { images } from "../../assets/imageUrls";
 
-const porcelainImages = [
+const allPorcelainImages = [
   images.hor1,
   images.hor2,
-  images.hor5,
   images.hor6,
   images.hor7,
   images.hor8,
@@ -19,7 +18,6 @@ const porcelainImages = [
 const altTexts = [
   "custom porcelain sign",
   "vintage enamel sign",
-  "round porcelain sign",
   "72 inch porcelain sign",
   "collector porcelain sign",
   "custom enamel sign",
@@ -33,6 +31,15 @@ const altTexts = [
 const GalleryPorcelain = () => {
   const [lightbox, setLightbox] = useState(false);
   const [currentImg, setCurrentImg] = useState(null);
+  const [porcelainImages, setPorcelainImages] = useState(allPorcelainImages.slice(0, 4));
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setPorcelainImages(allPorcelainImages);
+    }, 1500);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const openLightbox = (img) => {
     setCurrentImg(img);
@@ -46,7 +53,7 @@ const GalleryPorcelain = () => {
 
   return (
     <section className="gallery-porcelain">
-      <h2 className="gallery-title">Featured Porcelain Sign Projects</h2>
+      <h2 className="gallery-title">Explore Our Custom Porcelain Sign Collection</h2>
 
       <div className="porcelain-grid">
         {porcelainImages.map((img, index) => (
@@ -63,6 +70,7 @@ const GalleryPorcelain = () => {
               height="1000"
               loading="lazy"
               decoding="async"
+              sizes="(max-width: 900px) 50vw, 25vw"
             />
           </div>
         ))}

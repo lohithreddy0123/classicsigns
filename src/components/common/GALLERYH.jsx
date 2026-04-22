@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import "./GALLERYH.css";
 import { images as imgs } from "../../assets/imageUrls";
 
-const galleryImages = [
+const allImages = [
   imgs.hor6,
   imgs.hor7,
   imgs.hor8,
@@ -43,6 +43,17 @@ const altTexts = [
 const GalleryH = () => {
   const scrollRef = useRef(null);
   const [paused, setPaused] = useState(false);
+
+  // 🔥 load few first, rest later (no UI change)
+  const [galleryImages, setGalleryImages] = useState(allImages.slice(0, 6));
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setGalleryImages(allImages);
+    }, 1500);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const scroll = (dir) => {
     if (!scrollRef.current) return;
@@ -113,6 +124,7 @@ const GalleryH = () => {
                   height="340"
                   loading="lazy"
                   decoding="async"
+                  sizes="260px"
                 />
               </div>
             ))}

@@ -12,15 +12,7 @@ const WITHCLASSIC = lazy(() => import("../../components/common/WITHCLASSIC"));
 
 const Home = () => {
   useEffect(() => {
-    window.prerenderReady = false;
-
-    const timer = setTimeout(() => {
-      window.prerenderReady = true;
-    }, 1500);
-
-    return () => {
-      clearTimeout(timer);
-    };
+    window.prerenderReady = true;
   }, []);
 
   return (
@@ -44,7 +36,7 @@ const Home = () => {
         />
         <meta
           property="og:image"
-          content="https://firebasestorage.googleapis.com/v0/b/classicporcelainsigns.firebasestorage.app/o/images%2Flogoh.png?alt=media"
+          content="https://firebasestorage.googleapis.com/v0/b/classicporcelainsigns.firebasestorage.app/o/images-new%2Flogoh.webp?alt=media"
         />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -55,7 +47,7 @@ const Home = () => {
             description:
               "Custom handcrafted porcelain enamel signs for businesses and collectors.",
             image:
-              "https://firebasestorage.googleapis.com/v0/b/classicporcelainsigns.firebasestorage.app/o/images%2Flogoh.png?alt=media",
+              "https://firebasestorage.googleapis.com/v0/b/classicporcelainsigns.firebasestorage.app/o/images-new%2Flogoh.webp?alt=media",
             priceRange: "$$",
             telephone: "+91 98205 77396",
           })}
@@ -65,7 +57,7 @@ const Home = () => {
       <HERO />
 
       <div className="desktop-only-home-section">
-        <Suspense fallback={null}>
+        <Suspense fallback={<div style={{ minHeight: "700px" }} />}>
           <WITHCLASSIC />
         </Suspense>
       </div>

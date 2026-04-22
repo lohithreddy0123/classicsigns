@@ -10,13 +10,38 @@
     content="Custom porcelain signs and enamel signage handcrafted for durability, timeless appeal, and worldwide delivery."
   />
   <meta name="google-site-verification" content="google834047a4d9030e86" />
+
   <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <!-- 🔥 Preconnect (faster Firebase + fonts) -->
+  <link rel="preconnect" href="https://firebasestorage.googleapis.com" />
+  <link rel="dns-prefetch" href="https://firebasestorage.googleapis.com" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- 🚀 Preload HERO image (BIG LCP FIX) -->
   <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500&display=swap"
-    rel="stylesheet"
+    rel="preload"
+    as="image"
+    href="https://firebasestorage.googleapis.com/v0/b/classicporcelainsigns.firebasestorage.app/o/images-new%2Fhor1.webp?alt=media"
+    fetchpriority="high"
   />
+
+  <!-- Google Fonts — non blocking -->
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Playfair+Display:wght@500;600&family=Inter:wght@400;500&display=swap"
+    media="print"
+    onload="this.media='all'"
+  />
+  <noscript>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Playfair+Display:wght@500;600&family=Inter:wght@400;500&display=swap"
+    />
+  </noscript>
+
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZCDHPBFBH"></script>
   <script>
@@ -25,8 +50,10 @@
     gtag('js', new Date());
     gtag('config', 'G-SZCDHPBFBH');
   </script>
+
   <title>Classic Porcelain Signs | Custom Enamel Signage</title>
 </head>
+
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>

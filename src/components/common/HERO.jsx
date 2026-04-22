@@ -10,11 +10,6 @@ const slides = [
     subtitle: "Custom enamel buttons & round signage for collectors.",
   },
   {
-    image: images.hor5,
-    title: "Vintage Round Neon Signs",
-    subtitle: "Make a statement with retro neon & porcelain.",
-  },
-  {
     image: images.hor2,
     title: "Heritage Button Signage",
     subtitle: "Classic designs built to last decades.",
@@ -30,23 +25,35 @@ const HERO = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const touchStartX = useRef(null);
   const touchEndX = useRef(null);
+  const intervalRef = useRef(null);
 
   const currentSlide = useMemo(() => slides[currentIndex], [currentIndex]);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
+  const startAutoSlide = () => {
+    clearInterval(intervalRef.current);
+    intervalRef.current = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % slides.length);
     }, 5000);
+  };
 
-    return () => clearInterval(interval);
+  useEffect(() => {
+    startAutoSlide();
+    return () => clearInterval(intervalRef.current);
   }, []);
 
   const goToNext = () => {
     setCurrentIndex((prev) => (prev + 1) % slides.length);
+    startAutoSlide();
   };
 
   const goToPrev = () => {
     setCurrentIndex((prev) => (prev - 1 + slides.length) % slides.length);
+    startAutoSlide();
+  };
+
+  const goToSlide = (idx) => {
+    setCurrentIndex(idx);
+    startAutoSlide();
   };
 
   const handleTouchStart = (e) => {
@@ -57,11 +64,8 @@ const HERO = () => {
     touchEndX.current = e.changedTouches[0].screenX;
     const distance = touchStartX.current - touchEndX.current;
 
-    if (distance > 50) {
-      goToNext();
-    } else if (distance < -50) {
-      goToPrev();
-    }
+    if (distance > 50) goToNext();
+    if (distance < -50) goToPrev();
 
     touchStartX.current = null;
     touchEndX.current = null;
@@ -82,6 +86,7 @@ const HERO = () => {
             className="hero-image"
             width="1920"
             height="500"
+            sizes="100vw"
             fetchPriority="high"
             loading="eager"
             decoding="async"
@@ -95,7 +100,9 @@ const HERO = () => {
             ) : (
               <h2>{currentSlide.title}</h2>
             )}
+
             <p>{currentSlide.subtitle}</p>
+
             <Link to="/contact" className="hero-btn">
               Request a Free Quote
             </Link>
@@ -109,7 +116,7 @@ const HERO = () => {
             key={idx}
             type="button"
             className={`dot ${currentIndex === idx ? "active" : ""}`}
-            onClick={() => setCurrentIndex(idx)}
+            onClick={() => goToSlide(idx)}
             aria-label={`Go to slide ${idx + 1}`}
           />
         ))}
