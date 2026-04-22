@@ -18,6 +18,17 @@
   justify-content: space-between;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo a {
+  display: inline-flex;
+  align-items: center;
+}
+
 .logo img {
   width: 270px;
   height: auto;
@@ -46,6 +57,9 @@
   padding: 8px 12px;
   border-radius: 5px;
   transition: all 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .nav a:hover {
@@ -58,6 +72,9 @@
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0;
 }
 
 .hamburger span {
@@ -66,6 +83,7 @@
   background: #d1d1d1;
   border-radius: 2px;
   transition: all 0.3s;
+  display: block;
 }
 
 .hamburger.active span:nth-child(1) {
@@ -73,7 +91,9 @@
   background: #1E90FF;
 }
 
-.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
 
 .hamburger.active span:nth-child(3) {
   transform: rotate(-45deg) translate(6px, -6px);
@@ -94,18 +114,24 @@
   flex-direction: column;
 }
 
-.sidebar.open { left: 0; }
+.sidebar.open {
+  left: 0;
+}
 
 .sidebar-logo {
   height: 90px;
   display: flex;
   align-items: center;
-  justify-content: left;
+  justify-content: flex-start;
   margin-left: 15px;
   border-bottom: 1px solid #222;
 }
 
-.sidebar-logo img { width: 180px; }
+.sidebar-logo img {
+  width: 180px;
+  height: auto;
+  display: block;
+}
 
 .sidebar-nav {
   padding: 30px 20px;
@@ -138,7 +164,9 @@
   transition: 0.3s;
 }
 
-.sidebar-nav a:hover::before { opacity: 1; }
+.sidebar-nav a:hover::before {
+  opacity: 1;
+}
 
 .sidebar-nav a:hover {
   color: #1E90FF;
@@ -166,14 +194,32 @@
 }
 
 @media (max-width: 768px) {
-  .nav { display: none; }
-  .hamburger { display: flex; }
+  .nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
 }
 
 @media (min-width: 769px) {
-  .site-header { overflow: visible; }
-  .header-container { height: 100px; overflow: visible; }
-  .logo { display: flex; align-items: center; height: 100%; overflow: visible; }
+  .site-header {
+    overflow: visible;
+  }
+
+  .header-container {
+    height: 100px;
+    overflow: visible;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    overflow: visible;
+  }
+
   .logo img {
     width: auto;
     height: 150px;
@@ -181,11 +227,14 @@
     margin-left: -10px;
     position: relative;
     z-index: 10;
-    filter: drop-shadow(0 6px 24px rgba(0, 0, 0, 0.8)) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.9));
+    filter: drop-shadow(0 6px 24px rgba(0, 0, 0, 0.8))
+      drop-shadow(0 2px 6px rgba(0, 0, 0, 0.9));
     transition: transform 0.35s ease, filter 0.35s ease;
   }
+
   .logo img:hover {
     transform: scale(1.04) translateY(-3px);
-    filter: drop-shadow(0 8px 28px rgba(30, 144, 255, 0.45)) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.9));
+    filter: drop-shadow(0 8px 28px rgba(30, 144, 255, 0.45))
+      drop-shadow(0 2px 8px rgba(0, 0, 0, 0.9));
   }
 }
