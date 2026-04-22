@@ -1,17 +1,15 @@
 .footer {
   background: radial-gradient(circle at center,
-      #000000 0%,
-      #000000 45%,
-      #020b1c 65%,
-      #041a3a 85%,
-      #062a66 100%);
+    #000000 0%,
+    #000000 45%,
+    #020b1c 65%,
+    #041a3a 85%,
+    #062a66 100%);
   color: #ffffff;
   padding: 50px 20px;
-  /* taller for spacing */
   font-family: 'Montserrat', sans-serif;
   text-align: center;
   line-height: 1.6;
-  /* better line spacing */
 }
 
 .footer-container {
@@ -22,7 +20,6 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: 20px;
-  /* spacing between sections */
 }
 
 .footer-section {
@@ -51,9 +48,10 @@
   margin: 0 10px;
 }
 
-/* 🔥 FIXED: Remove all dots completely */
 .footer-links ul,
-.footer-links ul li {
+.footer-links ul li,
+.footer-links-list,
+.footer-links-list li {
   list-style: none !important;
   padding: 0;
   margin: 0;
@@ -61,9 +59,7 @@
 
 .footer-links ul li {
   margin-bottom: 12px;
-  /* spacing for taller look */
   font-size: 0.92em;
-  /* slightly smaller text */
 }
 
 .footer-links ul li a {
@@ -99,7 +95,6 @@
 
 .footer-bottom {
   margin-top: 30px;
-  /* spacing below all sections */
   font-size: 0.75em;
   color: #ffffff;
 }
@@ -107,12 +102,9 @@
 hr.footer-divider {
   border: none;
   border-top: 1px solid #444;
-  /* subtle separator line */
   margin: 25px 0;
-  /* spacing above/below */
 }
 
-/* MOBILE STYLES */
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
@@ -134,25 +126,14 @@ hr.footer-divider {
 
   .footer-links ul li {
     margin-bottom: 8px;
-    /* spacing better for mobile */
     font-size: 0.85em;
   }
 
   .footer-legal {
     display: none;
-    /* hide Legal section on mobile */
   }
 
-  /* optional: move Legal links into Quick Links for mobile */
   .footer-links ul li.legal-mobile {
     display: block;
   }
-}
-
-.footer-links-list,
-.footer-links-list li {
-  list-style: none !important;
-  /* remove bullets */
-  margin: 0;
-  padding: 0;
 }
