@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './header.css';
-import { FaHome, FaInfoCircle, FaServicestack, FaEnvelope } from 'react-icons/fa';
+import {
+  FaHome,
+  FaInfoCircle,
+  FaServicestack,
+  FaEnvelope,
+  FaPenNib
+} from 'react-icons/fa';
 import { images } from '../../assets/imageUrls';
 
 const Header = () => {
@@ -13,6 +19,7 @@ const Header = () => {
   return (
     <header className="site-header">
       <div className="header-container">
+
         <div className="logo">
           <Link to="/" aria-label="Go to homepage">
             <img
@@ -31,6 +38,7 @@ const Header = () => {
           <Link to="/"><FaHome /> Home</Link>
           <Link to="/about"><FaInfoCircle /> About</Link>
           <Link to="/services"><FaServicestack /> Services</Link>
+          <Link to="/blogs"><FaPenNib /> Blogs</Link>
           <Link to="/contact"><FaEnvelope /> Contact</Link>
         </nav>
 
@@ -46,6 +54,7 @@ const Header = () => {
           <span></span>
           <span></span>
         </button>
+
       </div>
 
       <div
@@ -68,6 +77,7 @@ const Header = () => {
           <Link to="/" onClick={closeSidebar}><FaHome /> Home</Link>
           <Link to="/about" onClick={closeSidebar}><FaInfoCircle /> About</Link>
           <Link to="/services" onClick={closeSidebar}><FaServicestack /> Services</Link>
+          <Link to="/blogs" onClick={closeSidebar}><FaPenNib /> Blogs</Link>
           <Link to="/contact" onClick={closeSidebar}><FaEnvelope /> Contact</Link>
         </nav>
       </div>
