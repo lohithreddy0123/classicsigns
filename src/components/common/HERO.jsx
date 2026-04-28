@@ -95,7 +95,9 @@ const HERO = () => {
           <div className="hero-shadow" />
 
           <div className="hero-content">
-            <h1>{currentSlide.title}</h1>
+            <h1>Classic Porcelain Signs</h1>
+
+            <h2 className="hero-slide-title">{currentSlide.title}</h2>
 
             <p>{currentSlide.subtitle}</p>
 
