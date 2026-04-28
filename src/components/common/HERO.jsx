@@ -76,13 +76,13 @@ const HERO = () => {
       className="hero-carousel"
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
-      aria-label="Hero carousel"
+      aria-label="Classic Porcelain Signs hero carousel"
     >
       <div className="hero-slide active">
         <div className="hero-image-wrapper">
           <img
             src={currentSlide.image}
-            alt={currentSlide.title}
+            alt={`${currentSlide.title} by Classic Porcelain Signs`}
             className="hero-image"
             width="1920"
             height="500"
@@ -95,11 +95,7 @@ const HERO = () => {
           <div className="hero-shadow" />
 
           <div className="hero-content">
-            {currentIndex === 0 ? (
-              <h1>{currentSlide.title}</h1>
-            ) : (
-              <h2>{currentSlide.title}</h2>
-            )}
+            <h1>{currentSlide.title}</h1>
 
             <p>{currentSlide.subtitle}</p>
 

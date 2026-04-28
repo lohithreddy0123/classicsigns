@@ -18,26 +18,29 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Custom Porcelain Signs | Enamel Signage Experts</title>
+        <title>Classic Porcelain Signs | Custom Porcelain & Enamel Signage</title>
         <meta
           name="description"
-          content="Custom porcelain signs and enamel signage handcrafted for durability and timeless appeal. Vintage designs, 72-inch round signs, and worldwide delivery available."
+          content="Classic Porcelain Signs crafts custom porcelain enamel signs and handcrafted enamel signage built for durability, timeless appeal, and worldwide delivery."
         />
         <link rel="canonical" href="https://www.classicporcelainsigns.com/" />
+
         <meta property="og:url" content="https://www.classicporcelainsigns.com/" />
         <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Classic Porcelain Signs" />
         <meta
           property="og:title"
-          content="Custom Porcelain Signs | Enamel Signage Experts"
+          content="Classic Porcelain Signs | Custom Porcelain & Enamel Signage"
         />
         <meta
           property="og:description"
-          content="Custom porcelain signs and enamel signage handcrafted for durability and timeless appeal."
+          content="Classic Porcelain Signs crafts custom porcelain enamel signs and handcrafted enamel signage built for durability, timeless appeal, and worldwide delivery."
         />
         <meta
           property="og:image"
           content="https://firebasestorage.googleapis.com/v0/b/classicporcelainsigns.firebasestorage.app/o/images-new%2Flogoh.webp?alt=media"
         />
+
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -45,11 +48,18 @@ const Home = () => {
             name: "Classic Porcelain Signs",
             url: "https://www.classicporcelainsigns.com",
             description:
-              "Custom handcrafted porcelain enamel signs for businesses and collectors.",
+              "Classic Porcelain Signs crafts custom porcelain enamel signs and handcrafted enamel signage for businesses, collectors, and brands worldwide.",
             image:
               "https://firebasestorage.googleapis.com/v0/b/classicporcelainsigns.firebasestorage.app/o/images-new%2Flogoh.webp?alt=media",
+            logo:
+              "https://firebasestorage.googleapis.com/v0/b/classicporcelainsigns.firebasestorage.app/o/images-new%2Flogoh.webp?alt=media",
             priceRange: "$$",
-            telephone: "+91 98205 77396",
+            telephone: "+919820577396",
+            email: "info@classicporcelainsigns.com",
+            address: {
+              "@type": "PostalAddress",
+              addressCountry: "IN",
+            },
           })}
         </script>
       </Helmet>

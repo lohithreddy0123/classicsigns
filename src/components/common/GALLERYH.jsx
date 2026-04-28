@@ -22,29 +22,27 @@ const allImages = [
 ];
 
 const altTexts = [
-  "custom porcelain sign",
-  "vintage enamel sign",
-  "72 inch porcelain sign",
-  "round porcelain sign",
-  "collector porcelain sign",
-  "custom enamel sign",
-  "porcelain advertising sign",
-  "handcrafted porcelain sign",
-  "retro enamel sign",
-  "custom round porcelain sign",
-  "large porcelain sign",
-  "classic enamel signage",
-  "porcelain button sign",
-  "round sign collection",
-  "neon sign display",
-  "custom logo sign",
+  "Custom porcelain sign project by Classic Porcelain Signs",
+  "Vintage enamel sign by Classic Porcelain Signs",
+  "72 inch porcelain sign by Classic Porcelain Signs",
+  "Round porcelain sign by Classic Porcelain Signs",
+  "Collector porcelain sign by Classic Porcelain Signs",
+  "Custom enamel sign by Classic Porcelain Signs",
+  "Porcelain advertising sign by Classic Porcelain Signs",
+  "Handcrafted porcelain sign by Classic Porcelain Signs",
+  "Retro enamel sign by Classic Porcelain Signs",
+  "Custom round porcelain sign by Classic Porcelain Signs",
+  "Large porcelain sign by Classic Porcelain Signs",
+  "Classic enamel signage by Classic Porcelain Signs",
+  "Porcelain button sign by Classic Porcelain Signs",
+  "Round sign collection by Classic Porcelain Signs",
+  "Neon sign display by Classic Porcelain Signs",
+  "Custom logo sign by Classic Porcelain Signs",
 ];
 
 const GalleryH = () => {
   const scrollRef = useRef(null);
   const [paused, setPaused] = useState(false);
-
-  // 🔥 load few first, rest later (no UI change)
   const [galleryImages, setGalleryImages] = useState(allImages.slice(0, 6));
 
   useEffect(() => {
@@ -94,7 +92,7 @@ const GalleryH = () => {
 
   return (
     <section id="gallery-section">
-      <h2>Featured Porcelain Sign Projects</h2>
+      <h2>Featured Classic Porcelain Signs Projects</h2>
 
       <div className="gallery-shell">
         <button
@@ -119,7 +117,7 @@ const GalleryH = () => {
               <div className="gallery-card" key={i}>
                 <img
                   src={img}
-                  alt={altTexts[i] || "custom porcelain sign"}
+                  alt={altTexts[i] || "Custom porcelain sign by Classic Porcelain Signs"}
                   width="260"
                   height="340"
                   loading="lazy"

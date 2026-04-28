@@ -22,14 +22,16 @@ const services = [
 const HomeService = () => {
   return (
     <section className="home-services">
-      <h2 className="services-title">Our Custom Sign Services</h2>
+      <h2 className="services-title">
+        Classic Porcelain Signs Custom Sign Services
+      </h2>
 
       <div className="services-grid">
         {services.map((service, index) => (
           <div className="service-card" key={index}>
             <img
               src={service.img}
-              alt={service.title.toLowerCase()}
+              alt={`${service.title} by Classic Porcelain Signs`}
               className="service-image"
               width="800"
               height="500"

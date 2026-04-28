@@ -6,7 +6,9 @@ const Intro = () => {
   return (
     <section id="introduction-section">
       <div className="introduction-text">
-        <h2 className="main-headline">Classic Porcelain Enamel Signs</h2>
+        <h2 className="main-headline">
+          Classic Porcelain Signs & Custom Enamel Signage
+        </h2>
 
         <p>
           At Classic Porcelain Signs, we create custom porcelain signs and
@@ -22,14 +24,14 @@ const Intro = () => {
 
         <p>
           We work with collectors, businesses, and brands worldwide to produce
-          custom signage that stands out and lasts for generations.
+          custom porcelain signage that stands out and lasts for generations.
         </p>
       </div>
 
       <div className="introduction-animation">
         <img
           src={images.round}
-          alt="custom round porcelain sign"
+          alt="Custom round porcelain sign by Classic Porcelain Signs"
           width="900"
           height="900"
           loading="lazy"
