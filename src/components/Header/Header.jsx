@@ -24,7 +24,7 @@ const Header = () => {
           <Link to="/" aria-label="Go to homepage">
             <img
               src={images.logoh}
-              alt="Classic Porcelain Signs Logo"
+              alt="Classic Porcelain Signs "
               width="320"
               height="72"
               loading="eager"
@@ -65,7 +65,7 @@ const Header = () => {
         <div className="sidebar-logo">
           <img
             src={images.logoh}
-            alt="Classic Porcelain Signs Logo"
+            alt="Classic Porcelain Signs "
             width="180"
             height="60"
             loading="lazy"
